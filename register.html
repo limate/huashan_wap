@@ -5,7 +5,7 @@
     <meta content="telephone=no" name="format-detection">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>华善金融-注册</title>
+    <title>华善金融-用户注册</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
     <!--自动适应移动屏幕-->
@@ -20,7 +20,6 @@
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/amazeui.min.js"></script>
 </head>
-<body style="background:#dfe6eb">
 <!-- Header -->
 <header data-am-widget="header" class="am-header am-header-default am-no-layout">
     <div class="am-header-left am-header-nav">
@@ -143,12 +142,12 @@
         $('#doc-confirm-toggle').on('click', function() {
             $('#my-confirm').modal({
                 relatedTarget: this,
-                onConfirm: function(options) {;
-                    alert("跳转到账户中心-实名认证");
+                onConfirm: function(options) {
+                    window.location.href="user-safe-set.html";
                 },
                 // closeOnConfirm: false,
                 onCancel: function() {
-                    alert('跳转到首页');
+                    window.location.href="homepage.html";
                 }
             });
         });

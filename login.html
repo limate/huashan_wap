@@ -5,7 +5,7 @@
     <meta content="telephone=no" name="format-detection">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>华善金融-登录</title>
+    <title>华善金融-用户登录</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
     <!--自动适应移动屏幕-->
@@ -20,7 +20,6 @@
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/amazeui.min.js"></script>
 </head>
-<body style="background:#dfe6eb">
 <!-- Header -->
 <header data-am-widget="header" class="am-header am-header-default am-no-layout">
     <div class="am-header-left am-header-nav">
@@ -51,18 +50,26 @@
                 </label>
             </div>
         </div>
-        <div class="tex-row am-form-group" style="border-bottom:0px">
-            <span class="tit">手机号</span>
-            <span class="wrods">
-                <input id="doc-vld-name-2-0" name="username" type="text" class="tex-row-input" placeholder="请输入手机号" pattern="^1[3|4|5|7|8][0-9]{9}$" maxlength="11" required data-foolish-msg="请输入11位手机号"/>
+        <div class="am-input-group am-form-group">
+            <span class="am-input-group-label">
+                <i class="am-icon-mobile-phone am-icon-sm am-icon-fw" aria-hidden="true"></i>
             </span>
+            <input type="text" id="doc-vld-name-2-0" class="am-form-field" placeholder="请输入手机号" pattern="^1[3|4|5|7|8][0-9]{9}$" maxlength="11" required data-foolish-msg="请输入11位手机号">
         </div>
-        <div class="tex-row" style="border-bottom:0px">
-            <span class="tit" >密码</span>
-            <span class="wrods">
-                <input id="doc-vld-pwd-1-0" name="password" type="password" class="tex-row-input" placeholder="请输入密码" required/>
+        <div class="am-input-group am-form-group">
+            <span class="am-input-group-label">
+                <i class="am-icon-lock am-icon-fw"></i>
             </span>
-            <p style="color:#f00;font-size:12px;" class="notes"></p>
+            <input type="password" class="am-form-field" placeholder="请输入密码">
+            <span class="am-input-group-label" style="background-color: white">
+                <div class="tpl-switch">
+                    <input type="checkbox" class="ios-switch bigswitch tpl-switch-btn" checked="">
+                    <div class="tpl-switch-btn-view">
+                        <div>
+                        </div>
+                    </div>
+                </div>
+            </span>
         </div>
     </fieldset>
     <div style="margin-top:5%;text-align: center">
