@@ -1,0 +1,250 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>华善金融</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <link rel="icon" type="image/png" href="assets/i/favicon.png">
+    <link rel="stylesheet" href="assets/css/amazeui.min.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/amazeui.js"></script>
+    <script src="assets/js/template-debug.js"></script>
+    <script src="assets/js/amazeui.min.js"></script>
+    <style type="text/css">
+        .hot_play{ position:relative;}
+        .hot_play ul{ float:right;background:url(assets/images/1.png) no-repeat;}
+    </style>
+</head>
+
+<body style="background: #f8f8f8;" class="am-with-fixed-navbar">
+
+<div class="page" >
+    <div id="wrappers" data-am-widget="list_news" class="am-list-news am-list-news-default am-no-layout">
+        <div class="am-list-news-bd">
+            <!-- Slider -->
+<!--            <section id="indexslider">
+                <div data-am-widget="slider" class="am-slider am-slider-a1 am-no-layout"
+                     data-am-slider="{&quot;directionNav&quot;:false}">
+                    <div class="am-viewport" style="overflow: hidden; position: relative;">
+                        <ul class="am-slides"
+                            style="width: 1400%; transition-duration: 0.6s; transform: translate3d(-9515px, 0px, 0px);">
+                            <li class="clone" aria-hidden="true" style="width: 1903px; float: left; display: block;">
+                                <a href="#"><img src="assets/images/banner-2.jpg" draggable="false"></a>
+                            </li>
+                            <li class="am-active-slide" style="width: 1903px; float: left; display: block;">
+                                <a href="#"><img src="assets/images/banner-2.jpg" draggable="false"></a>
+                            </li>
+                            <li class="" style="width: 1903px; float: left; display: block;">
+                                <a href="#"><img src="assets/images/banner-2.jpg" draggable="false"></a>
+                            </li>
+                            <li class="" style="width: 1903px; float: left; display: block;">
+                                <a href="#"><img src="assets/images/banner-2.jpg" draggable="false"></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <ol class="am-control-nav am-control-paging">
+                        <li><a class="am-active">1</a><i></i></li>
+                        <li><a class="">2</a><i></i></li>
+                        <li><a class="">3</a><i></i></li>
+                        <li><a class="">4</a><i></i></li>
+                    </ol>
+                </div>
+            </section>-->
+            <div data-am-widget="slider" class="am-slider am-slider-default" data-am-slider='{&quot;animation&quot;:&quot;slide&quot;,&quot;controlNav&quot;:&quot;thumbnails&quot;}' >
+                <ul class="am-slides">
+                    <li data-thumb="http://s.amazeui.org/media/i/demos/bing-1.jpg">
+                        <img src="http://s.amazeui.org/media/i/demos/bing-1.jpg">
+                        <div class="am-slider-desc"><div class="am-slider-counter"><span class="am-active">1</span>/4</div>远方 有一个地方 那里种有我们的梦想</div>
+                    </li>
+                    <li data-thumb="http://s.amazeui.org/media/i/demos/bing-2.jpg">
+                        <img src="http://s.amazeui.org/media/i/demos/bing-2.jpg">
+                        <div class="am-slider-desc"><div class="am-slider-counter"><span class="am-active">2</span>/4</div>远方 有一个地方 那里种有我们的梦想</div>
+                    </li>
+                    <li data-thumb="http://s.amazeui.org/media/i/demos/bing-3.jpg">
+                        <img src="http://s.amazeui.org/media/i/demos/bing-3.jpg">
+                        <div class="am-slider-desc"><div class="am-slider-counter"><span class="am-active">3</span>/4</div>远方 有一个地方 那里种有我们的梦想</div>
+                    </li>
+                    <li data-thumb="http://s.amazeui.org/media/i/demos/bing-4.jpg">
+                        <img src="http://s.amazeui.org/media/i/demos/bing-4.jpg">
+                        <div class="am-slider-desc"><div class="am-slider-counter"><span class="am-active">4</span>/4</div>远方 有一个地方 那里种有我们的梦想</div>
+                    </li>
+                </ul>
+            </div>
+            <!-- end Slider -->
+            <section id="indexbroadcast">
+                <div class="am-g doc-am-g">
+                    <div class="am-u-sm-6" style="font-size: 10px;text-align: center">累计撮合金额：1,000万</div>
+                    <div class="am-u-sm-6" style="font-size: 10px;text-align: center">已为投资人带来收益：1,000万</div>
+                </div>
+            </section>
+            <span class="am-badge am-badge-primary" style="margin-left: 3%">每日精选-推荐理财-满标计息</span>
+        </div>
+        <!-- indexlist -->
+        <section id="indexlist">
+            <ul class="am-gallery am-avg-sm-1 am-avg-md-2 am-gallery-default am-list list hot_play" id="events-list">
+
+            </ul>
+            <div class="pullrefresh" data=" " scrollspy="move" index="1" page="1"><span
+                    class="am-icon-arrow-down "></span>加载更多...
+            </div>
+            <div id="demo"></div>
+        </section>
+        <input type="hidden" id="nextPage" value="2">
+    </div>
+</div>
+
+<!-- Navbar -->
+<div data-am-widget="navbar" class="am-navbar am-cf am-navbar-default  am-no-layout" id="">
+    <ul class="am-navbar-nav am-cf am-avg-sm-4">
+        <li>
+            <a href="homepage.html" class="current">
+                <span class="am-icon-home"></span>
+                <span class="am-navbar-label">今日</span>
+            </a>
+        </li>
+        <li>
+            <a href="index.html" >
+                <span class="am-icon-bar-chart"></span>
+                <span class="am-navbar-label">投资</span>
+            </a>
+        </li>
+        <li>
+            <a href="user-home.html">
+                <span class="am-icon-user"></span>
+                <span class="am-navbar-label">个人中心</span>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+<script type="text/template" id="aa">
+    <li>
+        <div class="am-gallery-item crowdfund-box" >
+            <h2 class="fs-14">{{investment.title}}</h2>
+            <div class="am-progress-box clear">
+                <div class="am-progress am-progress-xs am-progress-striped am-active am-fl"
+                     style="width:75%;">
+                    <div class="am-progress-bar" style="width:100.00%"></div>
+                </div>
+                <i class="progress-words am-fr">100.00%</i>
+            </div>
+            <div class="clear">
+                <div class="am-fl fs-14 line-h-24">
+                    <span class="am-icon-tags fc-blue"></span>&nbsp;融资金额：{{investment.residualAmountStr}}<br>
+                    <span class="am-icon-line-chart fc-blue"></span>&nbsp;年化利率：{{investment.interestRate}}%
+                </div>
+                <div class="am-fr ta-r" style="width:80px;line-height:36px;margin-top:6px;">
+                    <a class="m-btn am-btn-sm am-btn-success ta-c" id={{investment.borrowingId}}
+                       href="#">{{investment.progressDesReal}}</a>
+                </div>
+            </div>
+        </div>
+    </li>
+</script>
+
+<script type="text/javascript">
+
+    $.ajax({
+        type: "get",
+        url: "investment.json",
+        async: false,
+        cache: false,
+        success: function (data) {
+            var conts = data.data.rows;
+            for (var i = 0; i < conts.length; i++) {
+                var row = conts[i];
+                console.log(row);
+                var a = template("aa", {"investment": row})
+                $("#events-list").append(a);
+            }
+            if (data.nextPage > data.total) {
+                $(".pullrefresh").html("没有啦!");
+                return;
+            }
+            nextPage = data.nextPage;
+            sta = 1;
+        },
+        error: function () {
+            $(".pullrefresh").html("出错啦！");
+        }
+    })
+
+    window.onscroll = move;
+    var sta = 1;
+    var nextPage = 2;
+    function move() {
+        var pageurl = $(".pullrefresh").attr("data");
+        var index = $(".pullrefresh").attr("index");
+        if (pageurl == null || pageurl == "undefined") return;
+        var scrtop = document.documentElement.scrollHeight;
+        var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+        /*屏幕高度*/
+        var vheight = document.documentElement.clientHeight;
+        if ((scrtop - vheight - scrollTop) < 10) {
+
+            if (sta == 0) return;
+            $.ajax({
+                type: "get",
+                url: "investment.json",
+                /*async: false,*/
+                /*cache: false,*/
+                beforeSend: function () {
+                    sta = 0;
+                    $(".pullrefresh").show();
+                    $(".pullrefresh").html('<span class="am-icon-arrow-down"></span>加载更多...');
+                },
+                success: function (data) {
+                    var conts = data.data.rows;
+                    for (var i = 0; i < conts.length; i++) {
+                        var row = conts[i];
+                        console.log(row);
+                        var a = template("aa", {"investment": row})
+                        $("#events-list").append(a);
+                    }
+                    if (data.nextPage > data.total) {
+                        $(".pullrefresh").html("没有啦!");
+                        return;
+                    }
+                    nextPage = data.nextPage;
+                    sta = 1;
+                },
+                error: function () {
+                    $(".pullrefresh").html("出错啦！");
+                }
+            })
+        }
+    }
+</script>
+<script type="text/javascript">
+    $(function () {
+        var nowTime = new Date();
+        intervalId = window.setInterval(function () {
+            $(".countdown").each(function (index, obj) {
+                $obj = $(obj);
+                var timeDifference = $obj.attr("endTime") - nowTime;
+                if (timeDifference > 1) {
+                    var days = Math.floor((timeDifference / 3600) / 24);
+                    var hours = Math.floor((timeDifference / 3600) % 24);
+                    var minutes = Math.floor((timeDifference / 60) % 60);
+                    var seconds = Math.floor(timeDifference % 60);
+                    $obj.text((days < 10 ? "0" + days : days) + "天-" + (hours < 10 ? "0" + hours : hours) + "时-" + (minutes < 10 ? "0" + minutes : minutes) + "分-" + (seconds < 10 ? "0" + seconds : seconds) + "秒");
+                } else {
+                    $obj.closest(".list-countdown").addClass("hide");
+                    var state = $obj.attr("state");
+                    $("#" + state).text("投资中");
+                }
+            });
+            nowTime++;
+        }, 1000);
+
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>兴发米理财</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <link rel="icon" type="image/png" href="assets/i/favicon.png">
+  <link rel="stylesheet" href="assets/css/amazeui.min.css">
+  <link rel="stylesheet" href="assets/css/app.css">
+</head>
+<style>
+	.am-tabs-bd .am-tab-panel{padding:0}
+</style>
+<body style="background:#dfe6eb">
+
+<!-- Header -->
+<header data-am-widget="header" class="am-header am-header-default">
+  <div class="am-header-left am-header-nav">
+      <a href="javascript:history.back(-1);" >
+      	<i class="am-header-icon am-icon-angle-left"></i>
+      </a>
+  </div>
+  <h1 class="am-header-title">
+    购买积分
+  </h1>
+</header>
+<!-- end Header -->
+
+<section class="border-t-b-1 am-margin-top-sm bcg-white">
+	<div class="tex-row">
+    	<span class="tit">购买数量</span>
+        <span class="wrods"><input id="jifen" type="number" step="100" min="100" max="5000" class="tex-row-input" placeholder="请输入要购买的积分数量"></span>
+    </div>
+</section>
+<section class="am-padding-sm ta-l fs-14">
+	所需费用：<span class="fc-red fs-14">¥</span> <span id="ff" class="fc-red fs-18">0</span>&nbsp;<span class="fs-12">.00元</span>
+</section>
+
+
+<button  class=" am-btn am-btn-block am-btn-danger am-margin-top-lg am-radius f_mid" style="width:70%">确定购买</button>
+
+
+<section class="pad-10 am-margin-top">
+<h1 class="fs-16">积分说明</h1>
+<span class="fs-12 fc-gray">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</span>
+</section>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/amazeui.min.js"></script>
+<script>
+	$(document).ready(function(e) {
+        $("#jifen").bind("click focusout", function(){
+			var vj = $(this).val();
+			$("#ff").html(vj*0.5);
+		})
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,238 @@
+<!doctype html>
+<html class="no-js">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>兴发米理财</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="renderer" content="webkit">
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<link rel="icon" type="image/png" href="assets/i/favicon.png">
+<link rel="stylesheet" href="assets/css/amazeui.min.css">
+<link rel="stylesheet" href="assets/css/app.css">
+</head>
+
+<body style="background:#dfe6eb">
+<!-- 投资弹窗-->
+<div class="am-modal am-modal-no-btn modal-bg-js" tabindex="-1" id="modal-touzi">
+  <div class="am-modal-dialog">
+    <div class="am-modal-hd" style="border-bottom:1px solid #ccc">众筹投资
+    </div>
+    <div class="am-modal-bd ta-l">
+      <span class="fs-12">项目名称：兴发米第54期众筹项目</span><br>
+      <span class="fs-12">投资时间：2015-12-09</span><br>
+      <span class="fs-12">投资金额：￥200000.00</span><br>
+      <div class="clear" style="padding:10px 0">
+      	<button class="am-btn am-btn-danger am-u-sm-6" data-am-modal-close data-am-modal="{target: '#doc-modal-1',width: 230}">确定投资</button>
+        <button class="am-btn am-btn-default am-u-sm-6" data-am-modal-close>取消投资</button>
+      </div>
+    </div>
+    
+  </div>
+</div>
+<!-- end 投资弹窗-->
+
+<!--状态弹窗-->
+<div class="am-modal am-modal-no-btn modal-bg" tabindex="-1" id="doc-modal-1">
+  <div class="am-modal-dialog">
+   <!--
+    <div class="am-modal-hd">Modal 标题
+      <a href="javascript: void(0)" class="am-close am-danger" data-am-modal-close>&times;</a>
+    </div>
+    -->
+    <div class="am-modal-bd">
+      投资成功
+    </div>
+  </div>
+</div>
+<!-- end 状态弹窗-->
+
+<!--状态弹窗-->
+<div class="am-modal am-modal-no-btn modal-bg" tabindex="-1" id="modal-toupiao">
+  <div class="am-modal-dialog">
+   <!--
+    <div class="am-modal-hd">Modal 标题
+      <a href="javascript: void(0)" class="am-close am-danger" data-am-modal-close>&times;</a>
+    </div>
+    -->
+    <div class="am-modal-bd">
+      投票成功
+    </div>
+  </div>
+</div>
+<!-- end 状态弹窗-->
+
+<!-- Header -->
+<header data-am-sticky data-am-widget="header" class="am-header am-header-default">
+  <div class="am-header-left am-header-nav"> <a href="javascript:history.back(-1);" > <i class="am-header-icon am-icon-angle-left"></i> </a> </div>
+  <h1 class="am-header-title"> 众筹详情 </h1>
+</header>
+<!-- end Header --> 
+<!-- Slider -->
+<section id="indexslider">
+  <div data-am-widget="slider" class="am-slider am-slider-a1" data-am-slider='{"directionNav":false}'  >
+    <ul class="am-slides">
+      <li> <a href="#"><img src="assets/images/14fd.jpg"></a> </li>
+      <li> <a href="#"><img src="assets/images/14fd.jpg"></a> </li>
+      <li> <a href="#"><img src="assets/images/14fd.jpg"></a> </li>
+      <li> <a href="#"><img src="assets/images/14fd.jpg"></a> </li>
+    </ul>
+  </div>
+</section>
+<!-- end Slider -->
+<section class="bcg-white pad-10">
+  <div class="am-g">
+    <div class="am-u-sm-10 am-padding-xs">
+      <h1 class="fs-16">兴发米第54期众筹项目</h1>
+      <h1 class="fs-14">大众途观2015款 1.8TSI 自动两驱豪</h1>
+    </div>
+    <div  class="am-u-sm-2 ta-c fs-12" style="border-left:1px solid #f0f0f0"><a data-am-modal="{target: '#my-share'}" href="#" class="fc-gray"><i class="am-icon-share-alt fs-20"></i><br>
+      分享</a></div>
+  </div>
+  <div class="radius-border-1" style="padding:15px 0 0">
+  	<div class="crowdfund-data-box">
+    	<div class="crowdfund-data-item">
+        	<i class="am-icon-btn am-icon-twitter"></i>
+            <span class="fc-red fs-14">￥300000</span><small>元</small><br><span>总筹资</span>
+        </div>
+        <div class="crowdfund-data-item">
+        	<i  class="am-icon-btn am-icon-twitter"></i>
+            <span class="fc-red fs-14">￥100000</span><small>元</small><br><span>剩余筹资</span>
+        </div>
+        <div class="crowdfund-data-item">
+        	<i  class="am-icon-btn am-icon-twitter"></i>
+            <span class="fc-red fs-14">45</span><small>天</small><br><span>持有时间</span>
+        </div>
+    </div>
+    <div class="pad-10 clear">
+          <div class="am-progress am-progress-xs am-progress-striped  am-active">
+              <div class="am-progress-bar am-progress-bar-danger" style="width:70%"></div>
+          </div>
+          <span class="fs-12 am-fr">70%（已有13人投资200000元）</span>
+      </div>
+  </div>
+  
+  <div class="radius-border-1 am-margin-top-xs">
+     <div class="crowdfund-amount-box">
+  		<span class="fs-14">投入金额：</span><input class="fs-16" placeholder="输入金额" /> <small>元</small>
+    </div>
+    <div class="bcg-gray pad-10" style="border-top:1px solid #ccc">
+    	<span class="fs-12">账户余额：5433.97元</span>   <a href="#">去充值</a>
+        <button class="am-btn am-btn-danger am-btn-sm am-fr am-radius" data-am-modal="{target: '#modal-touzi', width: 230}">投资</button>
+    </div>
+  </div>
+</section>
+<!-- 基础信息 -->
+<section class="pad-10 border-t-b-1" style="background:#fafafa">
+	<h3 class="detail-block-tit"><span>众筹基础信息</span></h3>
+    <div class="detail-cont">
+    	<dl>
+        	<dt>车辆信息：</dt>
+            <dd>第54期众筹车辆为大众途观2015款 1.8TSI 自动两驱豪华型【成都】<br>
+
+注册时间：15年6月<br>
+
+行驶里程：0.6万公里;<br>
+
+新车指导价为：25.98万（不含税）;
+			</dd>
+        </dl>
+        <dl>
+        	<dt>车辆信息：</dt>
+            <dd>￥300000.00</dd>
+        </dl>
+        <dl>
+        	<dt>分红比例：</dt>
+            <dd>70%</dd>
+        </dl>
+        <dl>
+        	<dt>众筹时间：</dt>
+            <dd>
+            <small class="bcg-blue fc-white" style="padding:0 2px">始</small> 2015-12-09  AM10:00<br>
+<small class="bcg-red fc-white" style="padding:0 2px">终</small> 2015-12-09  AM10:00
+            
+            </dd>
+        </dl>
+        <dl>
+        	<dt>备注：</dt>
+            <dd>若众筹时间即将结束并未筹满资金，由公司法人私人帐户(帐号：43e)
+私人出资参与众筹。</dd>
+        </dl>
+    </div>
+</section>
+<!--END 基础信息 -->
+
+<!-- 投票 -->
+<section class="pad-10 border-t-b-1 am-margin-top-sm" style="background:#fafafa">
+	<h3 class="detail-block-tit"><span>出售投票</span></h3>
+    <div class="detail-cont">
+    	<dl>
+        	<dt>筹满时间：</dt>
+            <dd>2015-12-09</dd>
+        </dl>
+        <dl>
+        	<dt>投票时间：</dt>
+            <dd>2015-12-28</dd>
+        </dl>
+        <span class="fs-14">买方愿出资 330000 元购买此车，<br>
+万元收益：700.00元</span>
+    </div>
+    <!--
+    <div class="am-progress am-progress-xs am-margin-top-sm am-radius">
+      <div class="am-progress-bar am-progress-bar-success"  style="width:75%">
+      	
+      </div>
+      <div class="am-progress-bar am-progress-bar-danger"  style="width:25%">
+      	
+      </div>
+    </div>
+    -->
+    <div class="am-g am-padding-top-xs">
+      <div class="ta-l f_l">
+      	<button class="am-btn am-btn-secondary am-btn-xs am-radius" data-am-modal="{target: '#modal-toupiao',width: 230}">赞成出售</button> <span class="fs-14 fc-blue">18票</span><br>
+        <div class=" blank_h10"></div>
+        <button class="am-btn am-btn-xs am-radius bcg-graydark fc-white" data-am-modal="{target: '#modal-toupiao',width: 230}">反对出售</button> <span class="fs-14 fc-676767">2票</span> 
+      </div>
+      <div class="ta-c">
+    	<span class="am-icon am-icon-check fc-blue" style="font-size:40px"></span>
+		<span class="fc-blue"  style="font-size:30px">通过</span>
+        <!--
+        	<span class="am-icon am-icon-close fc-red" style="font-size:40px"></span>
+		<span class="fc-red"  style="font-size:30px">不通过</span>
+        -->
+      </div>
+    </div>
+    
+</section>
+<!-- End 投票 -->
+
+<!-- Navbar -->
+<div data-am-widget="navbar" class="am-navbar am-cf am-navbar-default "
+     id="">
+  <ul class="am-navbar-nav am-cf am-avg-sm-4">
+    <li> <a href="index.html"> <span class="am-icon-home"></span> <span class="am-navbar-label">首页</span> </a> </li>
+    <li> <a href="my-crowdfund.html" class="current"> <span class="am-icon-bar-chart"></span> <span class="am-navbar-label">我的众筹</span> </a> </li>
+    <li> <a href="my-finance.html"> <span class="am-icon-pie-chart"></span> <span class="am-navbar-label">我的理财</span> </a> </li>
+    <li> <a href="record.html"> <span class="am-icon-file-text"></span> <span class="am-navbar-label">资金记录</span> </a> </li>
+    <li> <a href="user-home.html"> <span class="am-icon-user"></span> <span class="am-navbar-label">个人中心</span> </a> </li>
+  </ul>
+</div>
+<script src="assets/js/jquery.min.js"></script> 
+<script src="assets/js/amazeui.min.js"></script> 
+<!-- 分享 -->
+<div class="am-modal-actions bcg-white" id="my-share">
+  <div class="am-modal-actions-group">
+    <ul class="am-list">
+      <li><a href="#"><span class="am-icon-wechat"></span> 分享到微信</a></li>
+      <li><a href="#"><i class="am-icon-qq"></i> 分享到QQ</a></li>
+    </ul>
+  </div>
+  <div class="am-modal-actions-group">
+    <button class="am-btn am-btn-secondary am-btn-block" data-am-modal-close="">取消</button>
+  </div>
+</div>
+<!--End 分享 -->
+</body>
+</html>

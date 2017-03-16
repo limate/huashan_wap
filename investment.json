@@ -1,0 +1,91 @@
+{
+  "success": true,
+  "code": "000",
+  "status": "success",
+  "message": "借款列表",
+  "data": {
+    "rows": [
+      {
+        "borrowingId": 31,
+        "title": "CR217002-4补充流动资金",
+        "interestRate": 8.90,
+        "interestRateStr": "8.9",
+        "residualAmount": 0.00,
+        "residualAmountStr": "0万元",
+        "period": 12,
+        "periodUnit": "month",
+        "periodUnitStr": "12月",
+        "progress": "repaying",
+        "progressDes": "还款中",
+        "allowInvest": false,
+        "progressDesReal": "还款中",
+        "oldProject": false
+      },
+      {
+        "borrowingId": 30,
+        "title": "CR217002-3补充流动资金",
+        "interestRate": 8.90,
+        "interestRateStr": "8.9",
+        "residualAmount": 0.00,
+        "residualAmountStr": "0万元",
+        "period": 12,
+        "periodUnit": "month",
+        "periodUnitStr": "12月",
+        "progress": "repaying",
+        "progressDes": "还款中",
+        "allowInvest": false,
+        "progressDesReal": "还款中",
+        "oldProject": false
+      },
+      {
+        "borrowingId": 29,
+        "title": "CR217002-2补充流动资金",
+        "interestRate": 8.90,
+        "interestRateStr": "8.9",
+        "residualAmount": 0.00,
+        "residualAmountStr": "0万元",
+        "period": 12,
+        "periodUnit": "month",
+        "periodUnitStr": "12月",
+        "progress": "repaying",
+        "progressDes": "还款中",
+        "allowInvest": false,
+        "progressDesReal": "还款中",
+        "oldProject": false
+      },
+      {
+        "borrowingId": 28,
+        "title": "CR217002-1补充流动资金",
+        "interestRate": 8.90,
+        "interestRateStr": "8.9",
+        "residualAmount": 0.00,
+        "residualAmountStr": "0万元",
+        "period": 12,
+        "periodUnit": "month",
+        "periodUnitStr": "12月",
+        "progress": "repaying",
+        "progressDes": "还款中",
+        "allowInvest": false,
+        "progressDesReal": "还款中",
+        "oldProject": false
+      },
+      {
+        "borrowingId": 27,
+        "title": "CR217001-23补充流动资金",
+        "interestRate": 8.30,
+        "interestRateStr": "8.3",
+        "residualAmount": 0.00,
+        "residualAmountStr": "0万元",
+        "period": 3,
+        "periodUnit": "month",
+        "periodUnitStr": "3月",
+        "progress": "repaying",
+        "progressDes": "还款中",
+        "allowInvest": false,
+        "progressDesReal": "还款中",
+        "oldProject": false
+      }
+    ],
+    "pages": 6
+  }
+}
