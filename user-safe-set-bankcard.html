@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>华善金融-实名认证</title>
+    <title>华善金融-快捷支付绑定</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -29,45 +29,56 @@
         </a>
     </div>
     <h1 class="am-header-title">
-        实名认证
+        快捷支付绑定
     </h1>
 </header>
 <!-- end Header -->
 
 <!--  banner -->
 <div class="set-banner bcg-skyblue ta-c am-padding-lg">
-    <span class="user-set-topicon"></span>
+    <span class="user-setbankcard-topicon"></span>
     <br>
-    <span class="fs-16 fc-white">您未通过实名认证</span>
+    <span class="fs-16 fc-white">快捷支付绑定</span>
 </div>
 <!-- end banner -->
 
 <section class="border-t-b-1 am-margin-top-sm bcg-white">
     <div class="tex-row bc-white">
         <span class="tit">真实姓名</span>
-        <span class="wrods"><input type="text" class="tex-row-input" placeholder="请输入真实姓名"></span>
+        <span class="wrods"><input type="text" class="tex-row-input" value="李先生" readonly></span>
     </div>
-
     <div class="tex-row bc-white">
         <span class="tit">身份证号</span>
-        <span class="wrods"><input type="text" class="tex-row-input" placeholder="请输入身份证号"></span>
+        <span class="wrods"><input type="text" class="tex-row-input" value="51303*********317" readonly></span>
+    </div>
+    <div class="tex-row bc-white">
+        <span class="tit">银行卡号</span>
+        <span class="wrods"><input type="text" class="tex-row-input" placeholder="输入您的银行卡号" ></span>
+    </div>
+    <div class="tex-row bc-white" onclick="window.location.href='homepage.html'">
+        <span class="tit">所属银行</span>
+        <span class="am-icon-angle-right am-icon-md am-vertical-align-middle fc-gray" style="margin:7px auto auto 88% "></span>
+    </div>
+    <div class="tex-row bc-white">
+        <span class="tit">预留手机号</span>
+        <span class="wrods"><input type="text" class="tex-row-input" placeholder="请输入预留手机号" ></span>
     </div>
 </section>
 
-<span class="mid-tip fs-12 fc-gray">请填写您的真实身份信息，我们不会泄漏您的任何隐私信息。</span>
-<a class=" am-btn am-btn-block am-btn-danger am-margin-top-lg am-radius f_mid" style="width:70%" data-am-modal="{target: '#my-modal-loading'}" id="doc-confirm-toggle">提交</a>
+<span class="left-tip fs-12 fc-gray">请确保您所需要绑定的银行卡已在银行开通网银、手机银行，如绑定失败请及时联系客服。<br/>客服电话：028-88888888</span>
+<a class=" am-btn am-btn-block am-btn-danger am-margin-top-lg am-radius f_mid" style="width:70%" data-am-modal="{target: '#my-modal-loading'}" id="doc-confirm-toggle">绑定</a>
 <!--<button  class=" am-btn am-btn-block am-btn-danger am-margin-top-lg am-radius f_mid" style="width:70%">提交</button>-->
 
 <!--实名认证成功弹出框样式-->
 <div class="am-modal am-modal-confirm" tabindex="-1" id="my-confirm">
     <div class="am-modal-dialog">
-        <div class="am-modal-hd">认证成功</div>
+        <div class="am-modal-hd">绑定成功</div>
         <div class="am-modal-bd">
-            立即绑定快捷支付，充值投资。
+            赶快去进行充值投资吧。
         </div>
         <div class="am-modal-footer">
             <span class="am-modal-btn" data-am-modal-cancel>随便看看</span>
-            <span class="am-modal-btn" data-am-modal-confirm>立即绑定</span>
+            <span class="am-modal-btn" data-am-modal-confirm>前往充值</span>
         </div>
     </div>
 </div>
@@ -102,7 +113,7 @@
             $('#my-confirm').modal({
                 relatedTarget: this,
                 onConfirm: function (options) {
-                    window.location.href = "user-safe-set-bankcard.html";
+                    window.location.href = "user-safe-set.html";
                 },
                 // closeOnConfirm: false,
                 onCancel: function () {

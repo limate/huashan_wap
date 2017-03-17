@@ -1166,6 +1166,13 @@ img.mycrowdfund-list-pic {
     line-height: 24px
 }
 
+.left-tip {
+    line-height: 20px;
+    padding: 5px 0;
+    display: block;
+    font-size: 14px;
+}
+
 .mid-tip {
     line-height: 20px;
     text-align: center;
@@ -1247,6 +1254,14 @@ h1.page-tit span.t-tip {
     height: 90px;
     display: inline-block;
     background: url(../images/set-top-icon.png) no-repeat;
+    background-size: 90px;
+}
+
+.user-setbankcard-topicon {
+    width: 90px;
+    height: 90px;
+    display: inline-block;
+    background: url(../images/bindcard.png) no-repeat;
     background-size: 90px;
 }
 
@@ -1615,4 +1630,14 @@ h1.page-tit span.t-tip {
 /*注册协议*/
 .fontcolor-register{
     color: #999999;
+}
+
+/*选择所属银行*/
+.select-bank {
+    width: 30px;
+    height: 30px;
+    background: url(../images/invest.png) no-repeat;
+    background-size: 30px;
+    display: block;
+    margin: 16% auto
 }
