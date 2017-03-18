@@ -567,6 +567,17 @@ h1, h2, h3, h4, h5, h6 {
     margin-right: auto
 }
 
+.tex-row .am-btn {
+    border-radius: 3px;
+    width: 100px;
+    position:relative;
+    margin-top: 9px;
+    font-size: 14px;
+    background-color: #1599ec;
+    color: #ffffff;
+    left: 15px;
+}
+
 .financ-box .am-btn.disable {
     background: #fff;
     border: 1px solid #ccc;
@@ -1209,7 +1220,15 @@ img.mycrowdfund-list-pic {
     display: table-cell;
     font-size: 14px;
     color: #333;
-    vertical-align: middle
+    vertical-align: middle;
+}
+
+.tex-row .wrods-yinhang {
+    display: table-cell;
+    font-size: 14px;
+    color: #333;
+    vertical-align: middle;
+    width: 80%;
 }
 
 .tex-row .tex-row-input {
@@ -1632,12 +1651,62 @@ h1.page-tit span.t-tip {
     color: #999999;
 }
 
-/*选择所属银行*/
-.select-bank {
-    width: 30px;
-    height: 30px;
-    background: url(../images/invest.png) no-repeat;
-    background-size: 30px;
+/*招商银行*/
+.select-bank-zhaoshang {
+    width: 20px;
+    height: 20px;
+    background: url(../images/bank/bank-zhaoshang.png) no-repeat;
+    background-size: 20px;
+    display: block;
+    margin: 16% auto
+}
+
+/*工商银行*/
+.select-bank-gongshang {
+    width: 20px;
+    height: 20px;
+    background: url(../images/bank/bank-gongshang.png) no-repeat;
+    background-size: 20px;
+    display: block;
+    margin: 16% auto
+}
+
+/*建设银行*/
+.select-bank-jianshe {
+    width: 20px;
+    height: 20px;
+    background: url(../images/bank/bank-jianshe.png) no-repeat;
+    background-size: 20px;
+    display: block;
+    margin: 16% auto
+}
+
+/*农业银行*/
+.select-bank-nongye {
+    width: 20px;
+    height: 20px;
+    background: url(../images/bank/bank-nongye.png) no-repeat;
+    background-size: 20px;
+    display: block;
+    margin: 16% auto
+}
+
+/*农业银行*/
+.select-bank-zhongguo {
+    width: 20px;
+    height: 20px;
+    background: url(../images/bank/bank-zhongguo.png) no-repeat;
+    background-size: 20px;
+    display: block;
+    margin: 16% auto
+}
+
+/*邮政银行*/
+.select-bank-youzheng {
+    width: 20px;
+    height: 20px;
+    background: url(../images/bank/bank-youzheng.png) no-repeat;
+    background-size: 20px;
     display: block;
     margin: 16% auto
 }

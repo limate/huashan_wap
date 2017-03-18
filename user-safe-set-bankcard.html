@@ -53,15 +53,21 @@
     </div>
     <div class="tex-row bc-white">
         <span class="tit">银行卡号</span>
-        <span class="wrods"><input type="text" class="tex-row-input" placeholder="输入您的银行卡号" ></span>
+        <span class="wrods"><input type="text" class="tex-row-input" placeholder="输入您的银行卡号"></span>
     </div>
-    <div class="tex-row bc-white" onclick="window.location.href='homepage.html'">
+    <div class="tex-row bc-white" onclick="window.location.href='select-bankcard.html'">
         <span class="tit">所属银行</span>
-        <span class="am-icon-angle-right am-icon-md am-vertical-align-middle fc-gray" style="margin:7px auto auto 88% "></span>
+        <span class="wrods"><input type="text" class="tex-row-input" value="请选择" readonly></span>
+        <span class="am-icon-angle-right am-icon-md am-vertical-align-middle fc-gray" style="margin:7px auto auto auto "></span>
     </div>
     <div class="tex-row bc-white">
         <span class="tit">预留手机号</span>
-        <span class="wrods"><input type="text" class="tex-row-input" placeholder="请输入预留手机号" ></span>
+        <span class="wrods"><input type="text" class="tex-row-input" placeholder="请输入预留手机号"></span>
+    </div>
+    <div class="tex-row bc-white">
+        <span class="tit">手机验证码</span>
+        <span class="wrods"><input type="text" class="tex-row-input" placeholder="请输入手机验证码"></span>
+        <input type="button" class="am-btn btn-loading" id="vertify" value="点击获取"></input>
     </div>
 </section>
 
@@ -122,6 +128,26 @@
             });
         });
     });
+</script>
+<script type="text/javascript">
+    var wait=60;
+    function time(o) {
+        if (wait == 0) {
+            o.removeAttribute("disabled");
+            o.style.backgroundColor="#1599ec";
+            o.value="点击获取";
+            wait = 60;
+        } else {
+            o.setAttribute("disabled", true);
+            o.style.backgroundColor="gray";
+            o.value= wait + "S";
+            wait--;
+            setTimeout(function() {
+                    time(o)
+                }, 1000)
+        }
+    }
+    document.getElementById("vertify").onclick=function(){time(this);}
 </script>
 
 
