@@ -319,8 +319,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .am-tabs-d2 .am-tabs-nav > .am-active {
-    border-bottom: none;
-    border-top: 2px solid #0e90d2
+    border-top: none;
+    border-bottom: 2px solid #0e90d2
 }
 
 #indexnav .am-tabs .am-tabs-nav {
@@ -626,9 +626,11 @@ img.mycrowdfund-list-pic {
 }
 
 .mycrowdfund-item-infowords {
-    margin-left: 90px;
+    margin-left: 12px;
     font-size: 12px;
-    overflow: auto
+    overflow: auto;
+    margin-bottom: 12px;
+
 }
 
 .mycrowdfund-item-foot {
@@ -1673,60 +1675,75 @@ h1.page-tit span.t-tip {
 
 /*招商银行*/
 .select-bank-zhaoshang {
-    width: 20px;
-    height: 20px;
+    width: 40px;
+    height: 40px;
     background: url(../images/bank/bank-zhaoshang.png) no-repeat;
-    background-size: 20px;
+    background-size: 40px;
     display: block;
     margin: 18% auto
 }
 
 /*工商银行*/
 .select-bank-gongshang {
-    width: 20px;
-    height: 20px;
+    width: 40px;
+    height: 40px;
     background: url(../images/bank/bank-gongshang.png) no-repeat;
-    background-size: 20px;
+    background-size: 40px;
     display: block;
     margin: 16% auto
 }
 
 /*建设银行*/
 .select-bank-jianshe {
-    width: 20px;
-    height: 20px;
+    width: 40px;
+    height: 40px;
     background: url(../images/bank/bank-jianshe.png) no-repeat;
-    background-size: 20px;
+    background-size: 40px;
     display: block;
     margin: 16% auto
 }
 
 /*农业银行*/
 .select-bank-nongye {
-    width: 20px;
-    height: 20px;
+    width: 40px;
+    height: 40px;
     background: url(../images/bank/bank-nongye.png) no-repeat;
-    background-size: 20px;
+    background-size: 40px;
     display: block;
     margin: 16% auto
 }
 
 /*农业银行*/
 .select-bank-zhongguo {
-    width: 20px;
-    height: 20px;
+    width: 40px;
+    height: 40px;
     background: url(../images/bank/bank-zhongguo.png) no-repeat;
-    background-size: 20px;
+    background-size: 40px;
     display: block;
     margin: 16% auto
 }
 
 /*邮政银行*/
 .select-bank-youzheng {
-    width: 20px;
-    height: 20px;
+    width: 40px;
+    height: 40px;
     background: url(../images/bank/bank-youzheng.png) no-repeat;
-    background-size: 20px;
+    background-size: 40px;
     display: block;
     margin: 16% auto
+}
+
+.m-keyboard {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    -webkit-transform: translate(0, 100%);
+    transform: translate(0, 100%);
+    -webkit-transition: -webkit-transform .3s;
+    transition: -webkit-transform .3s;
+    transition: transform .3s;
+    transition: transform .3s, -webkit-transform .3s;
+    background-color: #F7F7F7;
 }

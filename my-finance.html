@@ -12,115 +12,14 @@
   <link rel="icon" type="image/png" href="assets/i/favicon.png">
   <link rel="stylesheet" href="assets/css/amazeui.min.css">
   <link rel="stylesheet" href="assets/css/app.css">
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/amazeui.js"></script>
+    <script src="assets/js/template-debug.js"></script>
+    <script src="assets/js/amazeui.min.js"></script>
 </head>
 
-<body style="background:#dfe6eb">
+<body style="background:#f5f5f5">
 
-<!-- 结算弹窗-->
-<div class="am-modal am-modal-no-btn modal-bg-js" tabindex="-1" id="modal-js">
-  <div class="am-modal-dialog">
-    <div class="am-modal-hd" style="border-bottom:1px solid #ccc">鱼蛋宝结算
-    </div>
-    <div class="am-modal-bd ta-l">
-      <span class="fs-12">投资编号：201507230001</span><br>
-      <span class="fs-12">转入时间：2015-11-06</span><br>
-      <span class="fs-12">转入金额：￥5429.00</span><br>
-      <span class="fs-12">当前收益：￥4.75</span>
-      <div class="clear" style="padding:10px 0">
-      	<button class="am-btn am-btn-danger am-u-sm-6" data-am-modal-close data-am-modal="{target: '#doc-modal-1',width: 230}">确定结算</button>
-        <button class="am-btn am-btn-default am-u-sm-5" data-am-modal-close>取消</button>
-      </div>
-    </div>
-    
-  </div>
-</div>
-<!-- end 结算-->
-<!--状态弹窗-->
-<div class="am-modal am-modal-no-btn modal-bg" tabindex="-1" id="doc-modal-1">
-  <div class="am-modal-dialog">
-   <!--
-    <div class="am-modal-hd">Modal 标题
-      <a href="javascript: void(0)" class="am-close am-danger" data-am-modal-close>&times;</a>
-    </div>
-    -->
-    <div class="am-modal-bd">
-      结算成功
-    </div>
-  </div>
-</div>
-<!-- end 状态弹窗-->
-<!--
-<section>
-	<ul class="am-gallery">
-      <li class="p_rela">
-        <i class="badge-crowdfund-state b-ing"></i>
-        <div class="am-gallery-item mycrowdfund-box">
-              <h2 class="fs-14"><span class="fc-org">【鱼蛋宝】</span>201507230001</h2>
-              <div class="mycrowdfund-item-info clear">
-              	<img class="mycrowdfund-list-pic" src="assets/images/lc-pic-ydb.png" width="134" height="100" alt=""/>
-                <div class="mycrowdfund-item-infowords">
-                	<span>年利率：8%</span><br><span class="fc-gray">转入时间：2015-11-06</span>
-                </div>
-              </div>
-              <div class="mycrowdfund-item-foot">
-                <span>投资额：￥5429.00</span><br>
-<span>待收益：￥3190.52</span>
-              	<a class="am-btn am-btn-detail border-btn-org" href="#" data-am-modal="{target: '#modal-js', closeViaDimmer: 0, width: 230}">点击结算</a>
-              </div>
-        </div>
-      </li>
-      <li class="p_rela">
-        <i class="badge-crowdfund-state b-yjs"></i>
-        <div class="am-gallery-item mycrowdfund-box">
-              <h2 class="fs-14"><span class="fc-org">【鱼蛋宝】</span>201507230001</h2>
-              <div class="mycrowdfund-item-info clear">
-              	<img class="mycrowdfund-list-pic" src="assets/images/lc-pic-ydb.png" width="134" height="100" alt=""/>
-                <div class="mycrowdfund-item-infowords">
-                	<span>年利率：8%</span><br><span class="fc-gray">转入时间：2015-11-06</span>
-                </div>
-              </div>
-              <div class="mycrowdfund-item-foot">
-                <span>投资额：￥5429.00</span><br>
-<span>待收益：￥3190.52</span>
-              </div>
-        </div>
-      </li>
-      <li class="p_rela">
-        <i class="badge-crowdfund-state b-yhk"></i>
-        <div class="am-gallery-item mycrowdfund-box">
-              <h2 class="fs-14"><span class=" fc-green">【体验金】</span>华善金融新手体验金</h2>
-              <div class="mycrowdfund-item-info clear">
-              	<img class="mycrowdfund-list-pic" src="assets/images/lc-pic-tyj.png" width="134" height="100" alt=""/>
-                <div class="mycrowdfund-item-infowords">
-                	<span>体验金编号：XFMHD20151112016</span><br><span class="fc-gray">转入时间：2015-11-06</span>
-                </div>
-              </div>
-              <div class="mycrowdfund-item-foot">
-                <span>投资额：￥237200.00</span><br>
-<span>待收益：￥3190.52</span>
-              	<a class="am-btn am-btn-detail border-btn-green" href="#">一键投资</a>
-              </div>
-        </div>
-      </li>
-      <li class="p_rela">
-        <i class="badge-crowdfund-state b-"></i>
-        <div class="am-gallery-item mycrowdfund-box">
-              <h2 class="fs-14">【车抵贷】刘先生/借款/Y151126</h2>
-              <div class="mycrowdfund-item-info clear">
-              	<img class="mycrowdfund-list-pic" src="assets/images/lc-pic-header.png" width="134" height="100" alt=""/>
-                <div class="mycrowdfund-item-infowords">
-                	<span>年利率：18%</span><br><span>奖励：3.3%</span><br><span class="fc-gray">转入时间：2015-11-06</span>
-                </div>
-              </div>
-              <div class="mycrowdfund-item-foot">
-                <span>投资额：￥50000.00</span>
-              	<a class="am-btn am-btn-detail" href="#">查看详情</a>
-              </div>
-        </div>
-      </li>
-      </ul>
-</section>
--->
 <!-- Header -->
 <header data-am-widget="header" class="am-header am-header-default">
   <div class="am-header-left am-header-nav">
@@ -138,289 +37,207 @@
         <div class="am-tabs am-tabs-d2">
             <ul class="am-tabs-nav am-cf">
               <li class="am-active"><a href="#">全部项目</a></li>
-              <li class=""><a href="#">理财待收</a></li>
-              <li class=""><a href="#">鱼蛋宝</a></li>
-              <li class=""><a href="#">体验金</a></li>
+              <li class=""><a href="#">投资中</a></li>
+                <li class=""><a href="#">已筹满</a></li>
+              <li class=""><a href="#">还款中</a></li>
+              <li class=""><a href="#">已完成</a></li>
             </ul>
       </div>
-    </section> 
- <!-- end nav -->
-<div class="page">
- <div id="wrapper" data-am-widget="list_news" class="am-list-news am-list-news-default">
-        <div class="am-list-news-bd">
-          <ul class="am-gallery" id="events-list">
-            <li class="p_rela">
-              <div class="am-gallery-item mycrowdfund-box">
-                正在加载内容...
-              </div>
-            </li>
-          </ul>
-          <div class="pull-action" id="pull-up">
-            <span class="am-icon-arrow-down pull-label"
-                  id="pull-up-label"> 上拉加载更多</span>
-            <span class="am-icon-spinner am-icon-spin"></span>
-          </div>
-        </div>
-      </div>
-</div>
+    </section>
+<!-- indexlist -->
+<section id="indexlist">
+    <ul class="am-gallery am-avg-sm-1 am-avg-md-2 am-gallery-default am-list list" id="events-list">
+
+    </ul>
+    <div class="pullrefresh" data=" " scrollspy="move" index="1" page="1"><span
+            class="am-icon-arrow-down "></span>加载更多...
+    </div>
+    <div id="demo"></div>
+</section>
+<input type="hidden" id="nextPage" value="2">
 <!-- Navbar -->
-<div data-am-widget="navbar" class="am-navbar am-cf am-navbar-default "
-     id="">
-  <ul class="am-navbar-nav am-cf am-avg-sm-4">
-    <li>
-      <a href="index.html">
-        <span class="am-icon-home"></span>
-        <span class="am-navbar-label">首页</span>
-      </a>
-    </li>
-     <li>
-      <a href="my-crowdfund.html">
-        <span class="am-icon-bar-chart"></span>
-        <span class="am-navbar-label">我的众筹</span>
-      </a>
-    </li>
-     <li>
-      <a href="my-finance.html" class="current">
-        <span class="am-icon-pie-chart"></span>
-        <span class="am-navbar-label">我的理财</span>
-      </a>
-    </li>
-    <li>
-      <a href="record.html">
-        <span class="am-icon-file-text"></span>
-        <span class="am-navbar-label">资金记录</span>
-      </a>
-    </li>
-    <li>
-      <a href="user-home.html">
-        <span class="am-icon-user"></span>
-        <span class="am-navbar-label">个人中心</span>
-      </a>
-    </li>
-    
-  </ul>
+<div data-am-widget="navbar" class="am-navbar am-cf am-navbar-default  am-no-layout" id="">
+    <ul class="am-navbar-nav am-cf am-avg-sm-4">
+        <li>
+            <a href="homepage.html">
+                <span class="am-icon-home"></span>
+                <span class="am-navbar-label">今日</span>
+            </a>
+        </li>
+        <li>
+            <a href="index.html" >
+                <span class="am-icon-bar-chart"></span>
+                <span class="am-navbar-label">投资</span>
+            </a>
+        </li>
+        <li>
+            <a href="user-home.html" class="current">
+                <span class="am-icon-user"></span>
+                <span class="am-navbar-label">个人中心</span>
+            </a>
+        </li>
+    </ul>
 </div>
 
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/handlebars.min.js"></script>
-<script type="text/x-handlebars-template" id="tpi-list-item">
-  {{#each this}}
+<script type="text/template" id="aa">
   		<li class="p_rela">
-        <i class="badge-crowdfund-state b-ing"></i>
+        <i class="badge-crowdfund-state b-back"></i>
         <div class="am-gallery-item mycrowdfund-box">
-              <h2 class="fs-14"><span class="fc-org">【鱼蛋宝】</span>201507230001</h2>
-              <div class="mycrowdfund-item-info clear">
-              	<img class="mycrowdfund-list-pic" src="assets/images/lc-pic-ydb.png" width="134" height="100" alt=""/>
-                <div class="mycrowdfund-item-infowords">
-                	<span>年利率：8% </span><br><span class="fc-gray">转入时间：2015-11-06</span>
+              <h2 class="fs-14"><span class="fc-org">【产融贷】</span>{{investment.title}}</h2>
+              <div class="mycrowdfund-item-info clear ">
+                <div class="mycrowdfund-item-infowords am-g am-g-fixed">
+                    <div class="am-u-sm-6">年利率：{{investment.interestRate}}%</div>
+                    <span>投资额：{{investment.residualAmountStr}}</span>
+                    <br>
+                    <div class="am-u-sm-6">投资时间：2015-11-06 10:00</div>
+                    <span>待收益：￥3190.52</span>
                 </div>
-              </div>
-              <div class="mycrowdfund-item-foot">
-                <span>投资额：￥5429.00</span><br>
-<span>待收益：￥3190.52</span>
-              	<a class="am-btn am-btn-detail border-btn-org" href="#" data-am-modal="{target: '#modal-js',  width: 230}">点击结算</a>
+                  <div style="border-top: 1px solid #f0f0f0;">
+                  <ul class="am-list admin-sidebar-list" id="collapase-nav-1">
+                      <li class="am-panel">
+                          <a data-am-collapse="{parent: '#collapase-nav-1', target: '#company-nav'}" style="font-size:12px">
+                              <i class="am-icon-table am-margin-left-sm"></i> 回款计划 <i class="am-icon-angle-right am-fr am-margin-right"></i>
+                          </a>
+                          <ul class="am-list am-collapse admin-sidebar-sub" id="company-nav">
+                              <table class="am-table am-table-centered" style="font-size: 12px">
+                                  <thead>
+                                  <tr>
+                                      <th>回收期数</th>
+                                      <th>回收金额</th>
+                                      <th>回收时间</th>
+                                      <th>回收状态</th>
+                                  </tr>
+                                  </thead>
+                                  <tbody>
+                                  <tr>
+                                      <td>1/3</td>
+                                      <td>60.00</td>
+                                      <td>2012-10-01</td>
+                                      <td>已回收</td>
+                                  </tr>
+                                  <tr>
+                                      <td>2/3</td>
+                                      <td>60.00</td>
+                                      <td>2012-10-01</td>
+                                      <td>待回收</td>
+                                  </tr>
+                                  <tr>
+                                      <td>3/3</td>
+                                      <td>30,000</td>
+                                      <td>2012-10-01</td>
+                                      <td>待回收</td>
+                                  </tr>
+                                  </tbody>
+                              </table>
+                          </ul>
+                      </li>
+                  </ul>
+                  </div>
               </div>
         </div>
       </li>
-      <li class="p_rela">
-        <i class="badge-crowdfund-state b-yjs"></i>
-        <div class="am-gallery-item mycrowdfund-box">
-              <h2 class="fs-14"><span class="fc-org">【鱼蛋宝】</span>201507230001</h2>
-              <div class="mycrowdfund-item-info clear">
-              	<img class="mycrowdfund-list-pic" src="assets/images/lc-pic-ydb.png" width="134" height="100" alt=""/>
-                <div class="mycrowdfund-item-infowords">
-                	<span>年利率：8%</span><br><span class="fc-gray">转入时间：2015-11-06</span>
-                </div>
-              </div>
-              <div class="mycrowdfund-item-foot">
-                <span>投资额：￥5429.00</span><br>
-<span>待收益：￥3190.52</span>
-              </div>
-        </div>
-      </li>
-      <li class="p_rela">
-        <i class="badge-crowdfund-state b-yhk"></i>
-        <div class="am-gallery-item mycrowdfund-box">
-              <h2 class="fs-14"><span class=" fc-green">【体验金】</span>华善金融新手体验金</h2>
-              <div class="mycrowdfund-item-info clear">
-              	<img class="mycrowdfund-list-pic" src="assets/images/lc-pic-tyj.png" width="134" height="100" alt=""/>
-                <div class="mycrowdfund-item-infowords">
-                	<span>体验金编号：XFMHD20151112016</span><br><span class="fc-gray">转入时间：2015-11-06</span>
-                </div>
-              </div>
-              <div class="mycrowdfund-item-foot">
-                <span>投资额：￥237200.00</span><br>
-<span>待收益：￥3190.52</span>
-              	<a class="am-btn am-btn-detail border-btn-green" href="#">一键投资</a>
-              </div>
-        </div>
-      </li>
-      <li class="p_rela">
-        <i class="badge-crowdfund-state b-"></i>
-        <div class="am-gallery-item mycrowdfund-box">
-              <h2 class="fs-14">【车抵贷】刘先生/借款/Y151126</h2>
-              <div class="mycrowdfund-item-info clear">
-              	<img class="mycrowdfund-list-pic" src="assets/images/lc-pic-header.png" width="134" height="100" alt=""/>
-                <div class="mycrowdfund-item-infowords">
-                	<span>年利率：18%</span><br><span>奖励：3.3%</span><br><span class="fc-gray">转入时间：2015-11-06</span>
-                </div>
-              </div>
-              <div class="mycrowdfund-item-foot">
-                <span>投资额：￥50000.00</span>
-              	<a  class="am-btn am-btn-detail" href="crowdfund-detail2.html">查看详情</a>
-              </div>
-        </div>
-      </li>	
-  {{/each}}
 </script>
-<script src="assets/js/amazeui.min.js"></script>
 
-<script>
-  (function($) {
-    var EventsList = function(element, options) {
-      var $main = $('#wrapper');
-      var $list = $main.find('#events-list');
-      var $pullDown = $main.find('#pull-down');
-      var $pullDownLabel = $main.find('#pull-down-label');
-      var $pullUp = $main.find('#pull-up');
-      var topOffset = -$pullDown.outerHeight();
 
-      this.compiler = Handlebars.compile($('#tpi-list-item').html());
-      this.prev = this.next = this.start = options.params.start;
-      this.total = null;
+<!--<script type="text/template" id="aa">
+    <li>
+        <div class="am-gallery-item crowdfund-box">
+            <h2 class="fs-14">{{investment.title}}</h2>
+            <div class="am-progress-box clear">
+                <div class="am-progress am-progress-xs am-progress-striped am-active am-fl"
+                     style="width:75%;">
+                    <div class="am-progress-bar" style="width:100.00%"></div>
+                </div>
+                <i class="progress-words am-fr">100.00%</i>
+            </div>
+            <div class="clear">
+                <div class="am-fl fs-14 line-h-24">
+                    <span class="am-icon-tags fc-blue"></span>&nbsp;融资金额：{{investment.residualAmountStr}}元<br>
+                    <span class="am-icon-line-chart fc-blue"></span>&nbsp;年化利率：{{investment.interestRate}}%
+                </div>
+                <div class="am-fr ta-r" style="width:80px;line-height:36px;margin-top:6px;">
+                    <a class="m-btn am-btn-sm am-btn-success ta-c" id={{investment.borrowingId}}
+                       href="#">{{investment.progressDesReal}}</a>
+                </div>
+            </div>
+        </div>
+    </li>
+</script>-->
 
-      this.getURL = function(params) {
-        var queries = ['callback=?'];
-        for (var key in  params) {
-          if (key !== 'start') {
-            queries.push(key + '=' + params[key]);
-          }
+<script type="text/javascript">
+
+    $.ajax({
+        type: "get",
+        url: "investment.json",
+        async: false,
+        cache: false,
+        success: function (data) {
+            var conts = data.data.rows;
+            for (var i = 0; i < conts.length; i++) {
+                var row = conts[i];
+                console.log(row);
+                var a = template("aa", {"investment": row})
+                $("#events-list").append(a);
+            }
+            if (data.nextPage > data.total) {
+                $(".pullrefresh").html("没有啦!");
+                return;
+            }
+            nextPage = data.nextPage;
+            sta = 1;
+        },
+        error: function () {
+            $(".pullrefresh").html("出错啦！");
         }
-        queries.push('start=');
-        return options.api + '?' + queries.join('&');
-      };
+    })
 
-      this.renderList = function(start, type) {
-        var _this = this;
-        var $el = $pullDown;
+    window.onscroll = move;
+    var sta = 1;
+    var nextPage = 2;
+    function move() {
+        var pageurl = $(".pullrefresh").attr("data");
+        var index = $(".pullrefresh").attr("index");
+        if (pageurl == null || pageurl == "undefined") return;
+        var scrtop = document.documentElement.scrollHeight;
+        var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+        /*屏幕高度*/
+        var vheight = document.documentElement.clientHeight;
+        if ((scrtop - vheight - scrollTop) < 10) {
 
-        if (type === 'load') {
-          $el = $pullUp;
+            if (sta == 0) return;
+            $.ajax({
+                type: "get",
+                url: "investment.json",
+                /*async: false,*/
+                /*cache: false,*/
+                beforeSend: function () {
+                    sta = 0;
+                    $(".pullrefresh").show();
+                    $(".pullrefresh").html('<span class="am-icon-arrow-down"></span>加载更多...');
+                },
+                success: function (data) {
+                    var conts = data.data.rows;
+                    for (var i = 0; i < conts.length; i++) {
+                        var row = conts[i];
+                        console.log(row);
+                        var a = template("aa", {"investment": row})
+                        $("#events-list").append(a);
+                    }
+                    if (data.nextPage > data.total) {
+                        $(".pullrefresh").html("没有啦!");
+                        return;
+                    }
+                    nextPage = data.nextPage;
+                    sta = 1;
+                },
+                error: function () {
+                    $(".pullrefresh").html("出错啦！");
+                }
+            })
         }
-
-        $.getJSON(this.URL + start).then(function(data) {
-          console.log(data);
-          _this.total = data.total;
-          var html = _this.compiler(data.events);
-          if (type === 'refresh') {
-            $list.children('li').first().before(html);
-          } else if (type === 'load') {
-            $list.append(html);
-          } else {
-            $list.html(html);
-          }
-
-          // refresh iScroll
-          setTimeout(function() {
-            _this.iScroll.refresh();
-          }, 100);
-        }, function() {
-          console.log('Error...')
-        }).always(function() {
-          _this.resetLoading($el);
-          if (type !== 'load') {
-            _this.iScroll.scrollTo(0, topOffset, 800, $.AMUI.iScroll.utils.circular);
-          }
-        });
-      };
-
-      this.setLoading = function($el) {
-        $el.addClass('loading');
-      };
-
-      this.resetLoading = function($el) {
-        $el.removeClass('loading');
-      };
-
-      this.init = function() {
-        var myScroll = this.iScroll = new $.AMUI.iScroll('#wrapper', {
-          click: true
-        });
-        // myScroll.scrollTo(0, topOffset);
-        var _this = this;
-        var pullFormTop = false;
-        var pullStart;
-
-        this.URL = this.getURL(options.params);
-        this.renderList(options.params.start);
-
-        myScroll.on('scrollStart', function() {
-          if (this.y >= topOffset) {
-            pullFormTop = true;
-          }
-
-          pullStart = this.y;
-          // console.log(this);
-        });
-
-        myScroll.on('scrollEnd', function() {
-          if (pullFormTop && this.directionY === -1) {
-            _this.handlePullDown();
-          }
-          pullFormTop = false;
-
-          // pull up to load more
-          if (pullStart === this.y && (this.directionY === 1)) {
-            _this.handlePullUp();
-          }
-        });
-      };
-
-      this.handlePullDown = function() {
-        console.log('handle pull down');
-        if (this.prev > 0) {
-          this.setLoading($pullDown);
-          this.prev -= options.params.count;
-          this.renderList(this.prev, 'refresh');
-        } else {
-          console.log('别刷了，没有了');
-        }
-      };
-
-      this.handlePullUp = function() {
-        console.log('handle pull up');
-        if (this.next < this.total) {
-          this.setLoading($pullUp);
-          this.next += options.params.count;
-          this.renderList(this.next, 'load');
-        } else {
-          console.log(this.next);
-          // this.iScroll.scrollTo(0, topOffset);
-        }
-      }
-    };
-
-    $(function() {
-      var app = new EventsList(null, {
-
-        api: 'https://api.douban.com/v2/event/list',
-        params: {
-          start: 0,
-          type: 'music',
-          count: 2,
-          loc: 'beijing'
-        }
-      });
-      app.init();
-    });
-
-    document.addEventListener('touchmove', function(e) {
-      e.preventDefault();
-    }, false);
-	
-	var topheight = $("header").height()+$("#indexnav").height();
-    $(".page").height($("html").height()-topheight);
-  })(window.jQuery);
+    }
 </script>
 
 </body>

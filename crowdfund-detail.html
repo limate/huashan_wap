@@ -12,17 +12,17 @@
 <link rel="icon" type="image/png" href="assets/i/favicon.png">
 <link rel="stylesheet" href="assets/css/amazeui.min.css">
 <link rel="stylesheet" href="assets/css/app.css">
+    <link type="text/css" href="assets/css/step.css" rel="stylesheet">
 </head>
 
-<body style="background:#dfe6eb">
 <!-- 投资弹窗-->
 <div class="am-modal am-modal-no-btn modal-bg-js" tabindex="-1" id="modal-touzi">
   <div class="am-modal-dialog">
     <div class="am-modal-hd" style="border-bottom:1px solid #ccc">众筹投资
     </div>
     <div class="am-modal-bd ta-l">
-      <span class="fs-12">项目名称：华善金融第54期众筹项目</span><br>
-      <span class="fs-12">投资时间：2015-12-09</span><br>
+      <span class="fs-12">项目名称：CR20170322-扩大生产规模</span><br>
+      <span class="fs-12">投资利率：8.3%/年</span><br>
       <span class="fs-12">投资金额：￥200000.00</span><br>
       <div class="clear" style="padding:10px 0">
       	<button class="am-btn am-btn-danger am-u-sm-6" data-am-modal-close data-am-modal="{target: '#doc-modal-1',width: 230}">确定投资</button>
@@ -67,50 +67,37 @@
 <!-- Header -->
 <header data-am-sticky data-am-widget="header" class="am-header am-header-default">
   <div class="am-header-left am-header-nav"> <a href="javascript:history.back(-1);" > <i class="am-header-icon am-icon-angle-left"></i> </a> </div>
-  <h1 class="am-header-title"> 众筹详情 </h1>
+  <h1 class="am-header-title"> 投资详情 </h1>
+    <div  class="  am-header-right am-header-nav"><a data-am-modal="{target: '#my-share'}" href="#" class="fc-gray"><i class="am-icon-share-alt fs-20 fc-blue"></i>&nbsp;分享</a></div>
 </header>
 <!-- end Header --> 
-<!-- Slider -->
-<section id="indexslider">
-  <div data-am-widget="slider" class="am-slider am-slider-a1" data-am-slider='{"directionNav":false}'  >
-    <ul class="am-slides">
-      <li> <a href="#"><img src="assets/images/14fd.jpg"></a> </li>
-      <li> <a href="#"><img src="assets/images/14fd.jpg"></a> </li>
-      <li> <a href="#"><img src="assets/images/14fd.jpg"></a> </li>
-      <li> <a href="#"><img src="assets/images/14fd.jpg"></a> </li>
-    </ul>
-  </div>
-</section>
-<!-- end Slider -->
+
 <section class="bcg-white pad-10">
   <div class="am-g">
     <div class="am-u-sm-10 am-padding-xs">
-      <h1 class="fs-16">华善金融第54期众筹项目</h1>
-      <h1 class="fs-14">大众途观2015款 1.8TSI 自动两驱豪</h1>
+      <h1 class="fs-16">CRD20170321产融贷补充借款</h1>
     </div>
-    <div  class="am-u-sm-2 ta-c fs-12" style="border-left:1px solid #f0f0f0"><a data-am-modal="{target: '#my-share'}" href="#" class="fc-gray"><i class="am-icon-share-alt fs-20"></i><br>
-      分享</a></div>
   </div>
   <div class="radius-border-1" style="padding:15px 0 0">
   	<div class="crowdfund-data-box">
     	<div class="crowdfund-data-item">
         	<i class="am-icon-btn am-icon-twitter"></i>
-            <span class="fc-red fs-14">￥300000</span><small>元</small><br><span>总筹资</span>
+            <span class="fc-red fs-14">￥300000</span><small>元</small><br><span>融资金额</span>
         </div>
         <div class="crowdfund-data-item">
         	<i  class="am-icon-btn am-icon-twitter"></i>
-            <span class="fc-red fs-14">￥100000</span><small>元</small><br><span>剩余筹资</span>
+            <span class="fc-red fs-14">￥100000</span><small>元</small><br><span>剩余可投</span>
         </div>
         <div class="crowdfund-data-item">
         	<i  class="am-icon-btn am-icon-twitter"></i>
-            <span class="fc-red fs-14">45</span><small>天</small><br><span>持有时间</span>
+            <span class="fc-red fs-14">3</span><small>月</small><br><span>投资期限</span>
         </div>
     </div>
     <div class="pad-10 clear">
           <div class="am-progress am-progress-xs am-progress-striped  am-active">
-              <div class="am-progress-bar am-progress-bar-danger" style="width:70%"></div>
+              <div class="am-progress-bar am-progress-bar-danger" style="width:50%"></div>
           </div>
-          <span class="fs-12 am-fr">70%（已有13人投资200000元）</span>
+          <span class="fs-12 am-fr">50%（已有13人投资150,000元）</span>
       </div>
   </div>
   
@@ -124,100 +111,166 @@
     </div>
   </div>
 </section>
-<!-- 基础信息 -->
-<section class="pad-10 border-t-b-1" style="background:#fafafa">
-	<h3 class="detail-block-tit"><span>众筹基础信息</span></h3>
-    <div class="detail-cont">
-    	<dl>
-        	<dt>车辆信息：</dt>
-            <dd>第54期众筹车辆为大众途观2015款 1.8TSI 自动两驱豪华型【成都】<br>
+<div data-am-widget="tabs"
+     class="am-tabs am-tabs-d2"
+>
+    <ul class="am-tabs-nav am-cf">
+        <li class="am-active"><a href="[data-tab-panel-0]">项目信息</a></li>
+        <li class=""><a href="[data-tab-panel-1]">购买记录</a></li>
+        <li class=""><a href="[data-tab-panel-2]">项目进度</a></li>
+    </ul>
+    <div class="am-tabs-bd">
+        <div data-tab-panel-0 class="am-tab-panel am-active">
+            <!-- 基础信息 -->
+            <section class="pad-10 border-t-b-1" style="background:#fafafa">
+                <div class="detail-cont">
+                    <dl>
+                        <dt>项目描述：</dt>
+                        <dd>本产品为产业链金融产品，融资人为华善认证的优质核心企业的下游合作方；<br>
 
-注册时间：15年6月<br>
+                            本产品为产业链金融产品，融资人为华善认证的优质核心企业的下游合作方；<br>
 
-行驶里程：0.6万公里;<br>
+                            本产品为产业链金融产品，融资人为华善认证的优质核心企业的下游合作方；<br>
 
-新车指导价为：25.98万（不含税）;
-			</dd>
-        </dl>
-        <dl>
-        	<dt>车辆信息：</dt>
-            <dd>￥300000.00</dd>
-        </dl>
-        <dl>
-        	<dt>分红比例：</dt>
-            <dd>70%</dd>
-        </dl>
-        <dl>
-        	<dt>众筹时间：</dt>
-            <dd>
-            <small class="bcg-blue fc-white" style="padding:0 2px">始</small> 2015-12-09  AM10:00<br>
-<small class="bcg-red fc-white" style="padding:0 2px">终</small> 2015-12-09  AM10:00
-            
-            </dd>
-        </dl>
-        <dl>
-        	<dt>备注：</dt>
-            <dd>若众筹时间即将结束并未筹满资金，由公司法人私人帐户(帐号：43e)
-私人出资参与众筹。</dd>
-        </dl>
-    </div>
-</section>
-<!--END 基础信息 -->
+                            本产品为产业链金融产品，融资人为华善认证的优质核心企业的下游合作方。
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>资金用途：</dt>
+                        <dd>补充流动资金</dd>
+                    </dl>
+                    <dl>
+                        <dt>还款来源</dt>
+                        <dd>第一还款来源：企业以经营收入偿还；第二还款来源：以在核心企业应收账款偿还。</dd>
+                    </dl>
+                    <dl>
+                        <dt>投资时间：</dt>
+                        <dd>
+                            <small class="bcg-blue fc-white" style="padding:0 2px">始</small> 2015-12-09  AM10:00<br>
+                            <small class="bcg-red fc-white" style="padding:0 2px">终</small> 2015-12-09  AM10:00
 
-<!-- 投票 -->
-<section class="pad-10 border-t-b-1 am-margin-top-sm" style="background:#fafafa">
-	<h3 class="detail-block-tit"><span>出售投票</span></h3>
-    <div class="detail-cont">
-    	<dl>
-        	<dt>筹满时间：</dt>
-            <dd>2015-12-09</dd>
-        </dl>
-        <dl>
-        	<dt>投票时间：</dt>
-            <dd>2015-12-28</dd>
-        </dl>
-        <span class="fs-14">买方愿出资 330000 元购买此车，<br>
-万元收益：700.00元</span>
+                        </dd>
+                    </dl>
+                    <div data-am-widget="slider" class="am-slider am-slider-c1" data-am-slider='{&quot;directionNav&quot;:false}' >
+                        <ul class="am-slides">
+                            <li>
+                                <img src="http://s.amazeui.org/media/i/demos/bing-1.jpg">
+                                <div class="am-slider-desc">远方 有一个地方 那里种有我们的梦想</div>
+
+                            </li>
+                            <li>
+                                <img src="http://s.amazeui.org/media/i/demos/bing-2.jpg">
+                                <div class="am-slider-desc">某天 也许会相遇 相遇在这个好地方</div>
+
+                            </li>
+                            <li>
+                                <img src="http://s.amazeui.org/media/i/demos/bing-3.jpg">
+                                <div class="am-slider-desc">不要太担心 只因为我相信 终会走过这条遥远的道路</div>
+
+                            </li>
+                            <li>
+                                <img src="http://s.amazeui.org/media/i/demos/bing-4.jpg">
+                                <div class="am-slider-desc">OH PARA PARADISE 是否那么重要 你是否那么地遥远</div>
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <!--END 基础信息 -->
+        </div>
+        <div data-tab-panel-1 class="am-tab-panel " style="position: absolute">
+            <table class="am-table am-table-striped am-table-compact" style="font-size: 12px">
+                <thead>
+                <tr>
+                    <th>投资人</th>
+                    <th>投资金额</th>
+                    <th>投资时间</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>李先生</td>
+                    <td>100,000</td>
+                    <td>2012-10-01 12:00:00</td>
+                </tr>
+                <tr>
+                    <td>李先生</td>
+                    <td>100,000</td>
+                    <td>2012-10-01 12:00:00</td>
+                </tr>
+                <tr>
+                    <td>李先生</td>
+                    <td>100,000</td>
+                    <td>2012-10-01 12:00:00</td>
+                </tr>
+                <tr>
+                    <td>李先生</td>
+                    <td>100,000</td>
+                    <td>2012-10-01 12:00:00</td>
+                </tr>
+                <tr>
+                    <td>李先生</td>
+                    <td>100,000</td>
+                    <td>2012-10-01 12:00:00</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div data-tab-panel-2 class="am-tab-panel ">
+            <section class="border-t-b-1 bcg-white">
+                <div class="tex-row bc-white">
+                    <span class="select-bank-zhaoshang" ></span>
+                    <span class="wrods-yinhang"><strong>项目发起</strong><br><i style="font-size: 12px">发起时间：2017年03月15日 09时09分 | 发起人：******* n</i></span>
+                </div>
+                <div class="tex-row bc-white">
+                    <span class="select-bank-gongshang" ></span>
+                    <span class="wrods-yinhang"><strong>项目调查</strong><br><i style="font-size: 12px">发起时间：2017年03月15日 09时09分 | 发起人：******* n</i></span>
+                </div>
+                <div class="tex-row bc-white">
+                    <span class="select-bank-jianshe" ></span>
+                    <span class="wrods-yinhang"><strong>项目审批</strong><br><i style="font-size: 12px">发起时间：2017年03月15日 09时09分 | 发起人：******* n</i></span>
+                </div>
+                <div class="tex-row bc-white">
+                    <span class="select-bank-nongye" ></span>
+                    <span class="wrods-yinhang"><strong>农业银行</strong><br><i style="font-size: 12px">发起时间：2017年03月15日 09时09分 | 发起人：******* n</i></span>
+                </div>
+                <div class="tex-row bc-white">
+                    <span class="select-bank-youzheng" ></span>
+                    <span class="wrods-yinhang"><strong>项目筹集</strong><br><i style="font-size: 12px">发起时间：2017年03月15日 09时09分 | 发起人：******* n</i></span>
+                </div>
+                <div class="tex-row bc-white">
+                    <span class="select-bank-zhongguo" ></span>
+                    <span class="wrods-yinhang"><strong>项目返款</strong><br><i style="font-size: 12px">发起时间：2017年03月15日 09时09分 | 发起人：******* n</i></span>
+                </div>
+            </section>
+        </div>
     </div>
-    <!--
-    <div class="am-progress am-progress-xs am-margin-top-sm am-radius">
-      <div class="am-progress-bar am-progress-bar-success"  style="width:75%">
-      	
-      </div>
-      <div class="am-progress-bar am-progress-bar-danger"  style="width:25%">
-      	
-      </div>
-    </div>
-    -->
-    <div class="am-g am-padding-top-xs">
-      <div class="ta-l f_l">
-      	<button class="am-btn am-btn-secondary am-btn-xs am-radius" data-am-modal="{target: '#modal-toupiao',width: 230}">赞成出售</button> <span class="fs-14 fc-blue">18票</span><br>
-        <div class=" blank_h10"></div>
-        <button class="am-btn am-btn-xs am-radius bcg-graydark fc-white" data-am-modal="{target: '#modal-toupiao',width: 230}">反对出售</button> <span class="fs-14 fc-676767">2票</span> 
-      </div>
-      <div class="ta-c">
-    	<span class="am-icon am-icon-check fc-blue" style="font-size:40px"></span>
-		<span class="fc-blue"  style="font-size:30px">通过</span>
-        <!--
-        	<span class="am-icon am-icon-close fc-red" style="font-size:40px"></span>
-		<span class="fc-red"  style="font-size:30px">不通过</span>
-        -->
-      </div>
-    </div>
-    
-</section>
-<!-- End 投票 -->
+</div>
+
 
 <!-- Navbar -->
-<div data-am-widget="navbar" class="am-navbar am-cf am-navbar-default "
-     id="">
-  <ul class="am-navbar-nav am-cf am-avg-sm-4">
-    <li> <a href="index.html"> <span class="am-icon-home"></span> <span class="am-navbar-label">首页</span> </a> </li>
-    <li> <a href="my-crowdfund.html" class="current"> <span class="am-icon-bar-chart"></span> <span class="am-navbar-label">我的众筹</span> </a> </li>
-    <li> <a href="my-finance.html"> <span class="am-icon-pie-chart"></span> <span class="am-navbar-label">我的理财</span> </a> </li>
-    <li> <a href="record.html"> <span class="am-icon-file-text"></span> <span class="am-navbar-label">资金记录</span> </a> </li>
-    <li> <a href="user-home.html"> <span class="am-icon-user"></span> <span class="am-navbar-label">个人中心</span> </a> </li>
-  </ul>
+<div data-am-widget="navbar" class="am-navbar am-cf am-navbar-default  am-no-layout" id="">
+    <ul class="am-navbar-nav am-cf am-avg-sm-4">
+        <li>
+            <a href="homepage.html">
+                <span class="am-icon-home"></span>
+                <span class="am-navbar-label">今日</span>
+            </a>
+        </li>
+        <li>
+            <a href="index.html">
+                <span class="am-icon-bar-chart"></span>
+                <span class="am-navbar-label">投资</span>
+            </a>
+        </li>
+        <li>
+            <a href="user-home.html" class="current">
+                <span class="am-icon-user"></span>
+                <span class="am-navbar-label">个人中心</span>
+            </a>
+        </li>
+    </ul>
 </div>
 <script src="assets/js/jquery.min.js"></script> 
 <script src="assets/js/amazeui.min.js"></script> 

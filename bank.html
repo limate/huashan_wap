@@ -2,97 +2,101 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>List - theme4</title>
+    <title>华善金融-我的银行卡</title>
     <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport"/>
     <meta content="yes" name="apple-mobile-web-app-capable"/>
     <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
     <meta content="telephone=no" name="format-detection"/>
-    <link rel="stylesheet" href="assets/css/ydui/ydui.css?rev=@@hash"/>
-    <link rel="stylesheet" href="assets/css/ydui/demo.css"/>
-    <script src="assets/js/ydui/ydui.flexible.js"></script>
+    <link rel="stylesheet" href="assets/css/amazeui.min.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/amazeui.min.js"></script>
 </head>
-<body>
-<header class="m-navbar">
-    <a href="#" class="navbar-item">
-        <i class="back-ico"></i>返回
-    </a>
-    <div class="navbar-center">
+<body style="background:#f5f5f5">
+<!-- Header -->
+<header data-am-widget="header" class="am-header am-header-default">
+    <div class="am-header-left am-header-nav">
+        <a href="javascript:history.back(-1);">
+            <i class="am-header-icon am-icon-angle-left"></i>
+        </a>
     </div>
+    <h1 class="am-header-title">
+        我的银行卡
+    </h1>
 </header>
-<div id="J_Tab" class="m-tab">
-    <ul class="tab-nav">
-        <li class="tab-nav-item tab-active"><a href="javascript:;">快捷支付银行卡</a></li>
-        <li class="tab-nav-item"><a href="javascript:;">提现银行卡</a></li>
+<!-- end Header -->
+<div data-am-widget="tabs"
+     class="am-tabs am-tabs-d2"
+>
+    <ul class="am-tabs-nav am-cf">
+        <li class="am-active"><a href="[data-tab-panel-0]">快捷支付银行卡</a></li>
+        <li class=""><a href="[data-tab-panel-1]">提现银行卡</a></li>
     </ul>
-    <div class="tab-panel">
-        <div class="tab-panel-item tab-active">
-            <article class="m-list list-theme4">
-                <a href="#" class="list-item" style="height: 70px">
-                    <div class="list-img">
-                        <img src="assets/images/bank/bank-zhaoshang.png">
-                    </div>
-                    <div class="list-mes">
-                        <h3 class="list-title">招商银行（尾号1234）</h3>
-                        <div class="list-mes-item">
-                            <div>
-                                <span class="list-descript">单笔限额10,000元，单日限额20,000</span>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <a href="#" class="list-item" style="height: 70px">
-                    <div class="list-img">
-                        <img src="assets/images/bank/bank-jianshe.png">
-                    </div>
-                    <div class="list-mes">
-                        <h3 class="list-title">建设银行（尾号1235）</h3>
-                        <div class="list-mes-item">
-                            <div>
-                                <span class="list-price"><em>¥</em>34.7</span>
-                                <span class="list-del-price">¥45.65</span>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <a href="#" class="list-item" style="height: 70px">
-                    <div class="list-img">
-                        <img src="assets/images/bank/bank-nongye.png">
-                    </div>
-                    <div class="list-mes">
-                        <h3 class="list-title">农业银行（尾号1236）</h3>
-                        <div class="list-mes-item">
-                            <div>
-                                <span class="list-price"><em>¥</em>34.7</span>
-                                <span class="list-del-price">¥45.65</span>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </article>
+    <div class="am-tabs-bd">
+        <div data-tab-panel-0 class="am-tab-panel am-active" style="position: absolute">
+            <section class="border-t-b-1 bcg-white">
+                <div class="tex-row bc-white">
+                    <span class="select-bank-zhaoshang" ></span>
+                    <span class="wrods-yinhang"><strong>招商银行（尾号1234）</strong><br><i style="font-size: 12px">单笔限额10,000元，单日限额20,000元</i></span>
+                </div>
+                <div class="tex-row bc-white">
+                    <span class="select-bank-gongshang" ></span>
+                    <span class="wrods-yinhang"><strong>工商银行（尾号1235）</strong><br><i style="font-size: 12px">单笔限额10,000元，单日限额20,000元</i></span>
+                </div>
+                <div class="tex-row bc-white">
+                    <span class="select-bank-jianshe" ></span>
+                    <span class="wrods-yinhang"><strong>建设银行（尾号1236）</strong><br><i style="font-size: 12px">单笔限额10,000元，单日限额20,000元</i></span>
+                </div>
+                <div class="tex-row bc-white">
+                    <span class="select-bank-nongye" ></span>
+                    <span class="wrods-yinhang"><strong>农业银行（尾号1237）</strong><br><i style="font-size: 12px">单笔限额10,000元，单日限额20,000元</i></span>
+                </div>
+                <div class="tex-row bc-white">
+                    <span class="select-bank-youzheng" ></span>
+                    <span class="wrods-yinhang"><strong>邮政储蓄银行（尾号1238）</strong><br><i style="font-size: 12px">单笔限额10,000元，单日限额20,000元</i></span>
+                </div>
+                <div class="tex-row bc-white">
+                    <span class="select-bank-zhongguo" ></span>
+                    <span class="wrods-yinhang"><strong>中国银行（尾号1239）</strong><br><i style="font-size: 12px">单笔限额10,000元，单日限额20,000元</i></span>
+                </div>
+            </section>
+            <a class=" am-btn am-btn-block am-btn-danger am-margin-top-sm am-radius f_mid" style="width:70%" href="user-safe-set-bankcard.html">添加快捷支付银行卡</a>
         </div>
-
-        <div class="tab-panel-item">222222</div>
-        <div class="tab-panel-item">333333</div>
+        <div data-tab-panel-1 class="am-tab-panel" style="position: absolute">
+            <section class="border-t-b-1 bcg-white">
+                <div class="tex-row bc-white">
+                    <span class="select-bank-zhongguo" ></span>
+                    <span class="wrods-yinhang"><strong>中国银行（尾号1239）</strong></span>
+                </div>
+            </section>
+            <a class=" am-btn am-btn-block am-btn-danger am-margin-top-sm am-radius f_mid" style="width:70%" href="user-safe-set-withwardbankcard.html">修改提现银行卡</a>
+        </div>
     </div>
 </div>
+<!-- Navbar -->
+<div data-am-widget="navbar" class="am-navbar am-cf am-navbar-default  am-no-layout" id="">
+    <ul class="am-navbar-nav am-cf am-avg-sm-4">
+        <li>
+            <a href="homepage.html">
+                <span class="am-icon-home"></span>
+                <span class="am-navbar-label">今日</span>
+            </a>
+        </li>
+        <li>
+            <a href="index.html" >
+                <span class="am-icon-bar-chart"></span>
+                <span class="am-navbar-label">投资</span>
+            </a>
+        </li>
+        <li>
+            <a href="user-home.html" class="current">
+                <span class="am-icon-user"></span>
+                <span class="am-navbar-label">个人中心</span>
+            </a>
+        </li>
+    </ul>
+</div>
 <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="assets/js/ydui/ydui.js"></script>
-<script>
-    var $tab = $('#J_Tab');
 
-    $tab.tab({
-        nav: '.tab-nav-item',
-        panel: '.tab-panel-item',
-        activeClass: 'tab-active'
-    });
-
-    $tab.find('.tab-nav-item').on('open.ydui.tab', function (e) {
-        console.log('索引：%s - [%s]正在打开', e.index, $(this).text());
-    });
-
-    $tab.find('.tab-nav-item').on('opened.ydui.tab', function (e) {
-        console.log('索引：%s - [%s]已经打开了', e.index, $(this).text());
-    });
-</script>
 </body>
 </html>
