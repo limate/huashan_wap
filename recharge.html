@@ -1,55 +1,132 @@
 <!doctype html>
 <html class="no-js">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>华善金融</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-  <meta name="renderer" content="webkit">
-  <meta http-equiv="Cache-Control" content="no-siteapp" />
-  <link rel="icon" type="image/png" href="assets/i/favicon.png">
-  <link rel="stylesheet" href="assets/css/amazeui.min.css">
-  <link rel="stylesheet" href="assets/css/app.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>华善金融-充值</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <link rel="icon" type="image/png" href="assets/i/favicon.png">
+    <link rel="stylesheet" href="assets/css/amazeui.min.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/amazeui.min.js"></script>
 </head>
-<style>
-	.am-tabs-bd .am-tab-panel{padding:0}
-</style>
-<body style="background:#dfe6eb">
+
+<body style="background:#f5f5f5">
 
 <!-- Header -->
 <header data-am-widget="header" class="am-header am-header-default">
-  <div class="am-header-left am-header-nav">
-      <a href="javascript:history.back(-1);" >
-      	<i class="am-header-icon am-icon-angle-left"></i>
-      </a>
-  </div>
-  <h1 class="am-header-title">
-    充值
-  </h1>
+    <div class="am-header-left am-header-nav">
+        <a href="javascript:history.back(-1);">
+            <i class="am-header-icon am-icon-angle-left"></i>
+        </a>
+    </div>
+    <h1 class="am-header-title">
+        充值
+    </h1>
 </header>
 <!-- end Header -->
 
 
-
-<section class="border-t-b-1 am-margin-top-sm bcg-white">
-	<div class="tex-row bc-white">
-    	<span class="tit">充值金额</span>
+<section class="border-t-b-1 am-margin-top-sm bcg-white" onclick="window.location.href='pay-method.html'">
+    <div class="tex-row bc-white" id="J_ShowActionSheet">
+        <img src="assets/images/bank/bank-zhaoshang.png" style="height: 30px;margin-left: 15px;margin-top: 10px;margin-bottom: 10px;margin-right: 10px">
+        <span class="wrods-yinhang">招商银行（尾号1234）</span>
+        <span class="am-icon-angle-right fc-gray" style="padding-top: 10px;padding-right: 10px"></span>
+    </div>
+</section>
+<div class="fs-12 fc-blue" style="padding-left: 20px;line-height: 3rem;">当前可用余额0.00元</div>
+<section class="border-t-b-1 bcg-white">
+    <div class="tex-row bc-white">
+        <span class="tit">充值金额</span>
         <span class="wrods"><input type="text" class="tex-row-input" placeholder="请输入充值金额"></span>
+    </div>
+    <div class="tex-row bc-white">
+        <span class="tit">手机验证码</span>
+        <span class="wrods"><input type="text" class="tex-row-input" placeholder="请输入手机验证码"></span>
+        <input type="button" class="am-btn btn-loading" id="vertify" value="点击获取" style="float: right;right: 10px ">
     </div>
 </section>
 
-<span class="mid-tip fs-12 fc-gray">友情提示文字，有就写，没有就删除</span>
-<a href="pay-method.html" class=" am-btn am-btn-block am-btn-danger am-margin-top-lg am-radius f_mid" style="width:70%">下一步</a>
-<!--<button  class=" am-btn am-btn-block am-btn-danger am-margin-top-lg am-radius f_mid" style="width:70%">提交</button>-->
-
-
-
-<script src="assets/js/jquery.min.js"></script>
-
-<script src="assets/js/amazeui.min.js"></script>
-
-
+<div class="fs-12 fc-blue" style="padding-left: 20px;line-height: 3rem;">限额说明</div>
+<a class=" am-btn am-btn-block am-btn-danger am-margin-top-lg am-radius f_mid" style="width:70%" data-am-modal="{target: '#my-modal-loading'}">下一步</a>
+<div class="am-modal am-modal-loading am-modal-no-btn"  id="my-modal-loading">
+    <div class="am-modal-dialog">
+        <div class="am-modal-hd">处理中</div>
+        <div class="am-modal-bd">
+            <span class="am-icon-spinner am-icon-spin"></span>
+        </div>
+    </div>
+</div>
+<div class="am-modal am-modal-alert" tabindex="-1" id="my-modal-loading1">
+    <div class="am-modal-dialog">
+        <div class="am-modal-hd">充值成功</div>
+        <div class="am-modal-bd">
+            充值金额为：100,000.00元
+        </div>
+        <div class="am-modal-footer">
+            <span class="am-modal-btn" onclick="window.location.href='user-home.html'"> 确定</span>
+        </div>
+    </div>
+</div>
+<!-- Navbar -->
+<div data-am-widget="navbar" class="am-navbar am-cf am-navbar-default  am-no-layout" id="">
+    <ul class="am-navbar-nav am-cf am-avg-sm-4">
+        <li>
+            <a href="homepage.html">
+                <span class="am-icon-home"></span>
+                <span class="am-navbar-label">今日</span>
+            </a>
+        </li>
+        <li>
+            <a href="index.html" >
+                <span class="am-icon-bar-chart"></span>
+                <span class="am-navbar-label">投资</span>
+            </a>
+        </li>
+        <li>
+            <a href="user-home.html" class="current">
+                <span class="am-icon-user"></span>
+                <span class="am-navbar-label">个人中心</span>
+            </a>
+        </li>
+    </ul>
+</div>
+<script type="text/javascript">
+    var wait=60;
+    function time(o) {
+        if (wait == 0) {
+            o.removeAttribute("disabled");
+            o.style.backgroundColor="#1599ec";
+            o.value="点击获取";
+            wait = 60;
+        } else {
+            o.setAttribute("disabled", true);
+            o.style.backgroundColor="gray";
+            o.value= wait + "S";
+            wait--;
+            setTimeout(function() {
+                time(o)
+            }, 1000)
+        }
+    };
+    document.getElementById("vertify").onclick=function(){time(this);}
+    $(function() {
+        var $modal = $('#my-modal-loading');
+        var $modal1 = $('#my-modal-loading1');
+        $modal.on('open.modal.amui',function () {
+            setTimeout(function () {
+                $modal.modal('close');
+            },3000);
+        });
+        $modal.on('closed.modal.amui',function () {
+                $modal1.modal('open');
+        });
+    });
+</script>
 </body>
 </html>

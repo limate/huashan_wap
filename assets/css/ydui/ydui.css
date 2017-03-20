@@ -1616,7 +1616,7 @@ input[type="submit"].btn-hollow {
   overflow: hidden;
 }
 .list-img img {
-  width: 50%;
+  width: 40%;
   margin-top: -50%;
   background-color: #FFF;
   border: none;
@@ -2705,7 +2705,7 @@ input[type="submit"].btn-hollow {
   font-size: 0.28rem;
   color: #555;
   height: 1rem;
-  line-height: 1rem;
+  line-height: 0.5rem;
   background-color: #FFF;
 }
 .actionsheet-item:after {

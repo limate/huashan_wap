@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>List - theme4</title>
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport"/>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <link rel="stylesheet" href="assets/css/ydui/ydui.css?rev=@@hash"/>
+    <link rel="stylesheet" href="assets/css/ydui/demo.css"/>
+    <script src="assets/js/ydui/ydui.flexible.js"></script>
+</head>
+<body>
+<header class="m-navbar">
+    <a href="#" class="navbar-item">
+        <i class="back-ico"></i>返回
+    </a>
+    <div class="navbar-center">
+    </div>
+</header>
+<div id="J_Tab" class="m-tab">
+    <ul class="tab-nav">
+        <li class="tab-nav-item tab-active"><a href="javascript:;">快捷支付银行卡</a></li>
+        <li class="tab-nav-item"><a href="javascript:;">提现银行卡</a></li>
+    </ul>
+    <div class="tab-panel">
+        <div class="tab-panel-item tab-active">
+            <article class="m-list list-theme4">
+                <a href="#" class="list-item" style="height: 70px">
+                    <div class="list-img">
+                        <img src="assets/images/bank/bank-zhaoshang.png">
+                    </div>
+                    <div class="list-mes">
+                        <h3 class="list-title">招商银行（尾号1234）</h3>
+                        <div class="list-mes-item">
+                            <div>
+                                <span class="list-descript">单笔限额10,000元，单日限额20,000</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="list-item" style="height: 70px">
+                    <div class="list-img">
+                        <img src="assets/images/bank/bank-jianshe.png">
+                    </div>
+                    <div class="list-mes">
+                        <h3 class="list-title">建设银行（尾号1235）</h3>
+                        <div class="list-mes-item">
+                            <div>
+                                <span class="list-price"><em>¥</em>34.7</span>
+                                <span class="list-del-price">¥45.65</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="list-item" style="height: 70px">
+                    <div class="list-img">
+                        <img src="assets/images/bank/bank-nongye.png">
+                    </div>
+                    <div class="list-mes">
+                        <h3 class="list-title">农业银行（尾号1236）</h3>
+                        <div class="list-mes-item">
+                            <div>
+                                <span class="list-price"><em>¥</em>34.7</span>
+                                <span class="list-del-price">¥45.65</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </article>
+        </div>
+
+        <div class="tab-panel-item">222222</div>
+        <div class="tab-panel-item">333333</div>
+    </div>
+</div>
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="assets/js/ydui/ydui.js"></script>
+<script>
+    var $tab = $('#J_Tab');
+
+    $tab.tab({
+        nav: '.tab-nav-item',
+        panel: '.tab-panel-item',
+        activeClass: 'tab-active'
+    });
+
+    $tab.find('.tab-nav-item').on('open.ydui.tab', function (e) {
+        console.log('索引：%s - [%s]正在打开', e.index, $(this).text());
+    });
+
+    $tab.find('.tab-nav-item').on('opened.ydui.tab', function (e) {
+        console.log('索引：%s - [%s]已经打开了', e.index, $(this).text());
+    });
+</script>
+</body>
+</html>

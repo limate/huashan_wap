@@ -569,13 +569,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .tex-row .am-btn {
     border-radius: 3px;
-    width: 100px;
+    width: 80px;
     position:relative;
     margin-top: 9px;
     font-size: 14px;
     background-color: #1599ec;
     color: #ffffff;
-    left: 15px;
 }
 
 .financ-box .am-btn.disable {
@@ -1361,6 +1360,27 @@ h1.page-tit span.t-tip {
     background-size: 25px
 }
 
+.lb-zsyh {
+    background: url(../images/bank/bank-zhaoshang.png) no-repeat 5px center;
+    background-size: 25px
+}
+
+.lb-gsyh {
+    background: url(../images/bank/bank-gongshang.png) no-repeat 5px center;
+    background-size: 25px
+}
+
+.lb-nyyh {
+    background: url(../images/bank/bank-nongye.png) no-repeat 5px center;
+    background-size: 25px
+}
+
+.lb-jsyh {
+    background: url(../images/bank/bank-jianshe.png) no-repeat 5px center;
+    background-size: 25px
+}
+
+
 /*page*/
 .gj-page {;
     display: -webkit-box;
@@ -1658,7 +1678,7 @@ h1.page-tit span.t-tip {
     background: url(../images/bank/bank-zhaoshang.png) no-repeat;
     background-size: 20px;
     display: block;
-    margin: 16% auto
+    margin: 18% auto
 }
 
 /*工商银行*/
