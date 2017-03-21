@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>华善金融-我的银行卡</title>
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport"/>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <link rel="stylesheet" href="assets/css/amazeui.min.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/amazeui.min.js"></script>
+    <style type="text/css">
+        body {
+            background: url(assets/images/timg.jpg) no-repeat fixed;
+        }
+    </style>
+</head>
+<body>
+<!-- Header -->
+<header data-am-widget="header" class="am-header am-header-default">
+    <div class="am-header-left am-header-nav">
+        <a href="javascript:history.back(-1);">
+            <i class="am-header-icon am-icon-angle-left"></i>
+        </a>
+    </div>
+    <h1 class="am-header-title">
+        我的银行卡
+    </h1>
+</header>
+<!-- end Header -->
+<span>1.让朋友通过手机扫描你的专属二维码即可注册</span>
+<div id="doc-qrcode" class="am-text-center"></div>
+<span>2.你还可以通过以下方式分享你的专属邀请链接</span>
+
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/amazeui.min.js"></script>
+<script>
+    $(function () {
+        var a = {
+            text: "http://www.huashanjinrong.com", // 要生产二维码的文字
+            render: "canvas", // 渲染方式，默认的选择顺序为 `canvas` -> `svg` -> `table`
+            width: 100, // 二维码宽度 `px`
+            height: 100, // 二维码高度 `px`
+            correctLevel: 3, // 纠错级别，可取 0、1、2、3，数字越大说明所需纠错级别越大
+            background: "#ffffff", // 背景色
+            foreground: "#000000" // 前景色
+        };
+        var QRCode = $.AMUI.qrcode;
+        $('#doc-qrcode').html(new QRCode(a));
+    })
+</script>
+</body>
+</html>
