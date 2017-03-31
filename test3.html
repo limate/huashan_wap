@@ -1,0 +1,256 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>华善金融</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <link rel="icon" type="image/png" href="assets/i/ico.png">
+    <link rel="stylesheet" href="assets/css/amazeui.min.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/amazeui.js"></script>
+    <script src="assets/js/template-debug.js"></script>
+    <script src="assets/js/amazeui.min.js"></script>
+    <script src="assets/js/scrollUtils.js"></script>
+    <script type="text/javascript">
+        document.addEventListener('touchmove', function (e) {
+            e.preventDefault();
+        }, isPassive() ? {
+                capture: false,
+                passive: false
+            } : false);
+
+        function loaded() {
+            var IScroll = $.AMUI.iScroll;
+            var myScroll = new IScroll('#wrapper', {bounceEasing: 'elastic', bounceTime: 1200});
+        }
+    </script>
+    <style type="text/css">
+
+
+        body {
+            /*font-size: 12px;*/
+            /*font-family: ubuntu, helvetica, arial;*/
+            overflow: hidden; /* this is important to prevent the whole page to bounce */
+        }
+
+        #wrapper {
+            position: absolute;
+            z-index: 1;
+            top: 45px;
+            bottom: 48px;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        #scroller {
+            position: absolute;
+            z-index: 1;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            width: 100%;
+            -webkit-transform: translateZ(0);
+            -moz-transform: translateZ(0);
+            -ms-transform: translateZ(0);
+            -o-transform: translateZ(0);
+            transform: translateZ(0);
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            -webkit-text-size-adjust: none;
+            -moz-text-size-adjust: none;
+            -ms-text-size-adjust: none;
+            -o-text-size-adjust: none;
+            text-size-adjust: none;
+        }
+    </style>
+</head>
+
+<body style="background: #f8f8f8;" class="am-with-fixed-navbar" onload="loaded()">
+<div>
+    <ul id="indexnav" class="am-nav am-nav-pills am-nav-justify" style="background-color: #ffffff">
+        <li class="am-active"><a href="index.html">产融贷</a></li>
+        <li style="background-color:#ffffff "><a href="index-tz.html">优企宝</a></li>
+        <li style="background-color:#ffffff "><a href="index-lc.html">保理贷</a></li>
+    </ul>
+</div>
+
+
+<div id="wrapper" class=" am-list-news-default " style="height: 700px;">
+    <!-- indexlist -->
+    <div id="scroller">
+        <ul class="am-gallery am-avg-sm-1 am-avg-md-2 am-gallery-default am-list list" id="events-list">
+
+        </ul>
+        <div class="pullrefresh" data=" " scrollspy="move" index="1" page="1"><span
+                class="am-icon-arrow-down "></span>加载更多...
+        </div>
+        <div id="demo"></div>
+    </div>
+    <input type="hidden" id="nextPage" value="2">
+</div>
+
+
+<!-- Navbar -->
+<div data-am-widget="navbar" class="am-navbar am-cf am-navbar-default  am-no-layout" id="">
+    <ul class="am-navbar-nav am-cf am-avg-sm-4">
+        <li>
+            <a href="homepage.html">
+                <span class="am-icon-home"></span>
+                <span class="am-navbar-label">今日</span>
+            </a>
+        </li>
+        <li>
+            <a href="index.html" class="current">
+                <span class="am-icon-bar-chart"></span>
+                <span class="am-navbar-label">投资</span>
+            </a>
+        </li>
+        <li>
+            <a href="user-home.html">
+                <span class="am-icon-user"></span>
+                <span class="am-navbar-label">个人中心</span>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+<script type="text/template" id="aa">
+    <li>
+        <div class="am-gallery-item crowdfund-box">
+            <h2 class="fs-14">{{investment.title}}</h2>
+            <div class="am-progress-box clear">
+                <div class="am-progress am-progress-xs am-progress-striped am-active am-fl"
+                     style="width:75%;">
+                    <div class="am-progress-bar" style="width:100.00%"></div>
+                </div>
+                <i class="progress-words am-fr">100.00%</i>
+            </div>
+            <div class="clear">
+                <div class="am-fl fs-14 line-h-24">
+                    <span class="am-icon-tags fc-blue"></span>&nbsp;融资金额：{{investment.residualAmountStr}}元<br>
+                    <span class="am-icon-line-chart fc-blue"></span>&nbsp;年化利率：{{investment.interestRate}}%
+                </div>
+                <div class="am-fr ta-r" style="width:80px;line-height:36px;margin-top:6px;">
+                    <a class="m-btn am-btn-sm am-btn-success ta-c" id={{investment.borrowingId}}
+                       href="crowdfund-detail.html">{{investment.progressDesReal}}</a>
+                </div>
+            </div>
+        </div>
+    </li>
+</script>
+
+<script type="text/javascript">
+    console.log("滚动条已经到达底部，垂直滚动距离：" + $(document).scrollTop());
+    $.ajax({
+        type: "get",
+        url: "investment.json",
+        async: false,
+        cache: false,
+        success: function (data) {
+            var conts = data.data.rows;
+            for (var i = 0; i < conts.length; i++) {
+                var row = conts[i];
+                console.log(row);
+                var a = template("aa", {"investment": row})
+                $("#events-list").append(a);
+            }
+            if (data.nextPage > data.total) {
+                $(".pullrefresh").html("没有啦!");
+                return;
+            }
+            nextPage = data.nextPage;
+            sta = 1;
+        },
+        error: function () {
+            $(".pullrefresh").html("出错啦！");
+        }
+    })
+
+    window.onscroll = move;
+    var sta = 1;
+    var nextPage = 2;
+    function move() {
+        var pageurl = $(".pullrefresh").attr("data");
+        var index = $(".pullrefresh").attr("index");
+        if (pageurl == null || pageurl == "undefined") return;
+        var scrtop = document.documentElement.scrollHeight;
+        var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+        /*屏幕高度*/
+        var vheight = document.documentElement.clientHeight;
+        if ($(document).scrollTop() >= $(document).height() - $(window).height()) {
+            console.log("滚动条已经到达底部，垂直滚动距离：" + $(document).scrollTop());
+            if (sta == 0) return;
+
+            $.ajax({
+                type: "get",
+                url: "investment.json",
+                async: false,
+                cache: false,
+                beforeSend: function () {
+                    sta = 0;
+                    $(".pullrefresh").show();
+                },
+                success: function (data) {
+                    var conts = data.data.rows;
+                    for (var i = 0; i < conts.length; i++) {
+                        var row = conts[i];
+                        console.log(row);
+                        var a = template("aa", {"investment": row})
+                        $("#events-list").append(a);
+                    }
+                    if (data.nextPage > data.total) {
+                        $(".pullrefresh").html("没有啦!");
+                        return;
+                    }
+                    nextPage = data.nextPage;
+                    sta = 1;
+                },
+                error: function () {
+                    $(".pullrefresh").html("出错啦！");
+                }
+            })
+        }
+    }
+</script>
+<script type="text/javascript">
+    $(function () {
+        var nowTime = new Date();
+        intervalId = window.setInterval(function () {
+            $(".countdown").each(function (index, obj) {
+                $obj = $(obj);
+                var timeDifference = $obj.attr("endTime") - nowTime;
+                if (timeDifference > 1) {
+                    var days = Math.floor((timeDifference / 3600) / 24);
+                    var hours = Math.floor((timeDifference / 3600) % 24);
+                    var minutes = Math.floor((timeDifference / 60) % 60);
+                    var seconds = Math.floor(timeDifference % 60);
+                    $obj.text((days < 10 ? "0" + days : days) + "天-" + (hours < 10 ? "0" + hours : hours) + "时-" + (minutes < 10 ? "0" + minutes : minutes) + "分-" + (seconds < 10 ? "0" + seconds : seconds) + "秒");
+                } else {
+                    $obj.closest(".list-countdown").addClass("hide");
+                    var state = $obj.attr("state");
+                    $("#" + state).text("投资中");
+                }
+            });
+            nowTime++;
+        }, 1000);
+
+    });
+</script>
+<script>
+    $(function () {
+        $('#indexnav').sticky({
+            top: 0
+        })
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,299 @@
+<html lang="zh-cn">
+<head>
+    <meta name="viewport" content="initial-scale=1, user-scalable=0, minimal-ui" charset="UTF-8">
+    <title>固定布局，加载顶部、底部</title>
+    <link rel="stylesheet" href="assets/css/amazeui.min.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/amazeui.js"></script>
+    <script src="assets/js/template-debug.js"></script>
+    <script src="assets/js/amazeui.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            -webkit-text-size-adjust: none;
+        }
+
+        html {
+            font-size: 10px;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            font-size: 1.2em;
+        }
+
+        .outer {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-direction: column;
+            -webkit-box-orient: vertical;
+            box-orient: vertical;
+            -webkit-flex-direction: column;
+            flex-direction: column;
+        }
+
+        .header {
+            position: relative;
+            height: 44px;
+            line-height: 44px;
+            border-bottom: 1px solid #ccc;
+            background-color: #eee;
+        }
+
+        .header h1 {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: normal;
+        }
+
+        .header .btn {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 4em;
+            height: 100%;
+            text-align: center;
+            color: #06c;
+            font-size: 1.4rem;
+            background-color: #ccc;
+        }
+
+        .header .btn:active {
+            background-color: #aaa;
+            color: #fff;
+        }
+
+        .inner {
+            -webkit-box-flex: 1;
+            -webkit-flex: 1;
+            -ms-flex: 1;
+            flex: 1;
+            background-color: #fff;
+            overflow-y: scroll;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .inner .item {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-align: center;
+            -webkit-box-align: center;
+            box-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+            padding: 3.125%;
+            border-bottom: 1px solid #ddd;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .inner .item img {
+            display: block;
+            width: 40px;
+            height: 40px;
+            border: 1px solid #ddd;
+        }
+
+        .inner .item h3 {
+            display: block;
+            -webkit-box-flex: 1;
+            -webkit-flex: 1;
+            -ms-flex: 1;
+            flex: 1;
+            width: 100%;
+            max-height: 40px;
+            overflow: hidden;
+            line-height: 20px;
+            margin: 0 10px;
+            font-size: 1.2rem;
+        }
+
+        .inner .item .date {
+            display: block;
+            height: 20px;
+            line-height: 20px;
+            color: #999;
+        }
+
+        .opacity {
+            -webkit-animation: opacity 0.3s linear;
+            animation: opacity 0.3s linear;
+        }
+
+        @-webkit-keyframes opacity {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes opacity {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="assets/css/dropload.css">
+</head>
+<body>
+<div class="outer">
+    <div class="header">
+
+
+    </div>
+    <div class="inner">
+        <div class="lists">
+            <!-- indexlist -->
+            <section id="indexlist">
+                <ul class="am-gallery am-avg-sm-1 am-avg-md-2 am-gallery-default am-list list" id="events-list">
+
+                </ul>
+                <div id="demo"></div>
+            </section>
+        </div>
+    </div>
+    <!-- Navbar -->
+    <div data-am-widget="navbar" class="am-navbar am-cf am-navbar-default  am-no-layout" id="">
+        <ul class="am-navbar-nav am-cf am-avg-sm-4">
+            <li>
+                <a href="homepage.html">
+                    <span class="am-icon-home"></span>
+                    <span class="am-navbar-label">今日</span>
+                </a>
+            </li>
+            <li>
+                <a href="index.html" class="current">
+                    <span class="am-icon-bar-chart"></span>
+                    <span class="am-navbar-label">投资</span>
+                </a>
+            </li>
+            <li>
+                <a href="user-home.html">
+                    <span class="am-icon-user"></span>
+                    <span class="am-navbar-label">个人中心</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- jQuery1.7以上 或者 Zepto 二选一，不要同时都引用 -->
+    <!--<script src="assets/js/zepto.min.js"></script>-->
+    <script src="assets/js/dropload.min.js"></script>
+    <script type="text/template" id="aa">
+        <li>
+            <div class="am-gallery-item crowdfund-box">
+                <h2 class="fs-14">{{investment.title}}</h2>
+                <div class="am-progress-box clear">
+                    <div class="am-progress am-progress-xs am-progress-striped am-active am-fl"
+                         style="width:75%;">
+                        <div class="am-progress-bar" style="width:100.00%"></div>
+                    </div>
+                    <i class="progress-words am-fr">100.00%</i>
+                </div>
+                <div class="clear">
+                    <div class="am-fl fs-14 line-h-24">
+                        <span class="am-icon-tags fc-blue"></span>&nbsp;融资金额：{{investment.residualAmountStr}}元<br>
+                        <span class="am-icon-line-chart fc-blue"></span>&nbsp;年化利率：{{investment.interestRate}}%
+                    </div>
+                    <div class="am-fr ta-r" style="width:80px;line-height:36px;margin-top:6px;">
+                        <a class="m-btn am-btn-sm am-btn-success ta-c" id={{investment.borrowingId}}
+                           href="crowdfund-detail.html">{{investment.progressDesReal}}</a>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </script>
+    <script>
+        $(function () {
+            // dropload
+            var dropload = $('.inner').dropload({
+                domUp: {
+                    domClass: 'dropload-up',
+                    domRefresh: '<div class="dropload-refresh">↓下拉刷新</div>',
+                    domUpdate: '<div class="dropload-update"><span class="am-icon-arrow-down "></span></span>&nbsp;&nbsp;释放更新</div>',
+                    domLoad: '<div class="dropload-load"><span class="loading"></span>加载中...</div>'
+                },
+                domDown: {
+                    domClass: 'dropload-down',
+                    domRefresh: '<div class="dropload-refresh">↑上拉加载更多</div>',
+                    domLoad: '<div class="dropload-load"><span class="loading"></span>加载中...</div>',
+                    domNoData: '<div class="dropload-noData">暂无数据</div>'
+                },
+                loadUpFn: function (me) {
+                    $.ajax({
+                        type: 'GET',
+                        url: 'investment.json',
+                        dataType: 'json',
+                        success: function (data) {
+                            var result = '';
+                            for (var i = 0; i < data.lists.length; i++) {
+                                result += '<a class="item opacity" href="' + data.lists[i].link + '">'
+                                    + '<img src="' + data.lists[i].pic + '" alt="">'
+                                    + '<h3>' + data.lists[i].title + '</h3>'
+                                    + '<span class="date">' + data.lists[i].date + '</span>'
+                                    + '</a>';
+                            }
+                            // 为了测试，延迟1秒加载
+                            setTimeout(function () {
+                                $('.lists').html(result);
+                                // 每次数据加载完，必须重置
+                                dropload.resetload();
+                            }, 1000);
+                        },
+                        error: function (xhr, type) {
+                            alert('Ajax error!');
+                            // 即使加载出错，也得重置
+                            dropload.resetload();
+                        }
+                    });
+                },
+                loadDownFn: function (me) {
+                    $.ajax({
+                        type: 'GET',
+                        url: 'investment.json',
+                        dataType: 'json',
+                        success: function (data) {
+                            var result = '';
+                            for (var i = 0; i < data.lists.length; i++) {
+                                result += '<a class="item opacity" href="' + data.lists[i].link + '">'
+                                    + '<img src="' + data.lists[i].pic + '" alt="">'
+                                    + '<h3>' + data.lists[i].title + '</h3>'
+                                    + '<span class="date">' + data.lists[i].date + '</span>'
+                                    + '</a>';
+                            }
+                            // 为了测试，延迟1秒加载
+                            setTimeout(function () {
+                                $('.lists').append(result);
+                                // 每次数据加载完，必须重置
+                                dropload.resetload();
+                            }, 1000);
+                        },
+                        error: function (xhr, type) {
+                            alert('Ajax error!');
+                            // 即使加载出错，也得重置
+                            dropload.resetload();
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
